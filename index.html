@@ -225,6 +225,37 @@
     .modal-input:focus { border-color: var(--gold); outline: none; }
     .modal-label { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
     .error-text { color: #f87171; font-size: 0.7rem; margin-top: 0.25rem; }
+
+    /* ===== FAQ FIX: responsive Hinglish text ===== */
+    .faq-header-custom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 0.5rem 0.75rem;
+      width: 100%;
+    }
+    .faq-header-custom .faq-q {
+      flex: 1 1 140px;
+      font-weight: 500;
+      color: #fff;
+      text-align: left;
+      word-break: break-word;
+    }
+    .faq-header-custom .faq-h {
+      flex: 1 1 100px;
+      font-size: 0.7rem;
+      color: #888;
+      word-break: break-word;
+      line-height: 1.4;
+    }
+    .faq-header-custom .faq-chevron {
+      flex: 0 0 auto;
+      margin-top: 0.1rem;
+    }
+    @media (max-width: 480px) {
+      .faq-header-custom .faq-q { flex: 1 1 100%; }
+      .faq-header-custom .faq-h { flex: 1 1 100%; font-size: 0.65rem; }
+    }
   </style>
 </head>
 
@@ -363,19 +394,20 @@
       </div>
     </section>
 
-    <!-- Pricing -->
+    <!-- ===== UPDATED PRICING SECTION ===== -->
     <section id="pricing" class="scroll-mt-28 py-24 px-6" aria-labelledby="pricing-title">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
           <h2 id="pricing-title" class="text-3xl md:text-4xl font-display italic text-white">Simple, <span class="text-[#D4AF37]">Transparent</span> Pricing</h2>
-          <p class="text-[#888] mt-4">Choose a plan that fits your needs.</p>
+          <p class="text-[#888] mt-4">One-time payment. No recurring charges. Yearly AMC covers hosting &amp; support.</p>
           <div class="flex justify-center items-center gap-4 mt-6">
-            <span class="text-sm text-[#888]">Monthly</span>
-            <button id="pricingToggle" class="relative w-14 h-8 bg-[#1F1F1F] rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" role="switch" aria-checked="false" aria-label="Toggle between monthly and yearly pricing">
+            <span class="text-sm text-[#888] font-medium">One Time</span>
+            <button id="pricingToggle" class="relative w-14 h-8 bg-[#1F1F1F] rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" role="switch" aria-checked="false" aria-label="Toggle between one time and yearly AMC pricing">
               <span class="absolute top-1 left-1 w-6 h-6 bg-[#D4AF37] rounded-full transition-transform duration-300" id="pricingToggleDot"></span>
             </button>
-            <span class="text-sm text-[#888]">Yearly <span class="text-[#D4AF37] text-xs font-bold ml-1">Save 20%</span></span>
+            <span class="text-sm text-[#888] font-medium">Yearly (AMC) <span class="text-[#D4AF37] text-xs font-bold ml-1">Hosting + Maintenance</span></span>
           </div>
+          <p class="text-[#555] text-xs mt-4">* All prices in INR, exclusive of GST (18% as applicable).</p>
         </div>
         <div id="pricingGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8" role="list"></div>
       </div>
@@ -421,7 +453,6 @@
       <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8">
         <div class="lg:col-span-3 premium-card p-8 md:p-12 rounded-3xl">
           <form id="contactForm" class="space-y-6" novalidate>
-            <!-- For Netlify: add data-netlify="true" in production -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="name" class="block text-xs uppercase tracking-[0.1em] text-[#888] mb-1">Full Name <span class="text-red-400">*</span></label>
@@ -563,7 +594,6 @@
         }
         animate();
 
-        // Pause when tab is hidden to save resources
         document.addEventListener('visibilitychange', () => {
           if (document.hidden) {
             cancelAnimationFrame(animationId);
@@ -588,22 +618,45 @@
         { icon: 'shopping-cart', title: 'E-Commerce', description: 'Conversion-focused shops.' }
       ];
 
+      // All images uploaded as .png (as per user's upload list)
       const projects = [
-        { title: 'Sudha Coaching', category: 'Education', img: 'sudha.jpg', url: 'https://anujchaudhari.github.io/sudhacoachingclasses/' },
-        { title: 'Sandeep Academy', category: 'Education', img: 'sandeep.jpg', url: 'https://sandeepcoaching-classes.netlify.app/' },
-        { title: 'Gyan Path System', category: 'Web App', img: 'gyanpath.jpg', url: 'https://anujchaudhari.github.io/GyanPath' },
-        { title: 'AI ChatBoat', category: 'AI UX', img: 'chatbot.jpg', url: 'https://anujchaudhari.github.io/ChatBoat' },
-        { title: 'Shine Native', category: 'App', img: 'shinenative.jpg', url: 'https://anujchaudhari.github.io/shinenative/' },
-        { title: 'Smile Care', category: 'Health', img: 'smilecare.jpg', url: 'https://anujchaudhari.github.io/smilecareclinicrewa/' },
-        { title: 'Best Dentist', category: 'Health', img: 'himanshu.jpg', url: 'https://anujchaudhari.github.io/BestDentistinSatna/' },
-        { title: 'Invest Portal', category: 'Finance', img: 'invest.jpg', url: 'https://anujchaudhari.github.io/invest/' },
-        { title: 'CSC Center', category: 'Govt', img: 'csc.jpg', url: 'https://anujchaudhari.github.io/csc-center-kemar/' }
+        { title: 'Sudha Coaching', category: 'Education', img: 'sudha.png', url: 'https://anujchaudhari.github.io/sudhacoachingclasses/' },
+        { title: 'Sandeep Academy', category: 'Education', img: 'sandeep.png', url: 'https://sandeepcoaching-classes.netlify.app/' },
+        { title: 'Gyan Path System', category: 'Web App', img: 'gyanpath.png', url: 'https://anujchaudhari.github.io/GyanPath' },
+        { title: 'AI ChatBoat', category: 'AI UX', img: 'chatbot.png', url: 'https://anujchaudhari.github.io/ChatBoat' },
+        { title: 'Shine Native', category: 'App', img: 'shinenative.png', url: 'https://anujchaudhari.github.io/shinenative/' },
+        { title: 'Smile Care', category: 'Health', img: 'smilecare.png', url: 'https://anujchaudhari.github.io/smilecareclinicrewa/' },
+        { title: 'Best Dentist', category: 'Health', img: 'himanshu.png', url: 'https://anujchaudhari.github.io/BestDentistinSatna/' },
+        { title: 'Invest Portal', category: 'Finance', img: 'invest.png', url: 'https://anujchaudhari.github.io/invest/' },
+        { title: 'CSC Center', category: 'Govt', img: 'csc.png', url: 'https://anujchaudhari.github.io/csc-center-kemar/' }
       ];
 
+      // ===== UPDATED INDIAN PRICING: One Time + Yearly AMC =====
       const pricingPlans = [
-        { name: 'Starter', priceMonthly: 999, priceYearly: 799, features: ['1 Page Website', 'Mobile Responsive', 'Contact Form', 'Basic SEO Setup'], cta: 'Get Started', featured: false },
-        { name: 'Business', priceMonthly: 2999, priceYearly: 2399, features: ['5 Page Website', 'CMS Integration', 'Advanced SEO', 'Google Analytics', '30 Days Support'], cta: 'Get Started', featured: true },
-        { name: 'Enterprise', priceMonthly: 9999, priceYearly: 7999, features: ['Unlimited Pages', 'Custom Development', 'E-Commerce Setup', 'Full SEO Suite', '1 Year Support'], cta: 'Contact Us', featured: false }
+        {
+          name: 'Starter',
+          priceOneTime: 4999,
+          priceYearlyAMC: 999,
+          features: ['1 Page Website', 'Mobile Responsive', 'Contact Form', 'Basic SEO Setup'],
+          cta: 'Get Started',
+          featured: false
+        },
+        {
+          name: 'Business',
+          priceOneTime: 14999,
+          priceYearlyAMC: 2999,
+          features: ['5 Page Website', 'CMS Integration', 'Advanced SEO', 'Google Analytics', '30 Days Support'],
+          cta: 'Get Started',
+          featured: true
+        },
+        {
+          name: 'Enterprise',
+          priceOneTime: 49999,
+          priceYearlyAMC: 9999,
+          features: ['Unlimited Pages', 'Custom Development', 'E-Commerce Setup', 'Full SEO Suite', '1 Year Support'],
+          cta: 'Contact Us',
+          featured: false
+        }
       ];
 
       const processSteps = [
@@ -646,7 +699,7 @@
         const filtered = category === 'All' ? projects : projects.filter(p => p.category === category);
         grid.innerHTML = filtered.map((p, i) => `
           <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="premium-card block rounded-2xl group overflow-hidden reveal" style="transition-delay: ${i * 80}ms" role="listitem">
-            <img src="${p.img}" loading="lazy" decoding="async" class="w-full h-48 object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" alt="${p.title}" width="600" height="400">
+            <img src="${p.img}" loading="lazy" decoding="async" class="w-full h-48 object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" alt="${p.title}" width="600" height="400" onerror="this.src='https://via.placeholder.com/600x400?text=${encodeURIComponent(p.title)}'">
             <div class="p-6">
               <h4 class="text-xl text-white group-hover:text-[#D4AF37] transition-colors">${p.title}</h4>
               <p class="text-[#888] text-xs mt-1">${p.category}</p>
@@ -680,13 +733,17 @@
         });
       }
 
+      // ===== UPDATED RENDER PRICING =====
       function renderPricing(isYearly = false) {
         const grid = document.getElementById('pricingGrid');
         if (!grid) return;
         grid.innerHTML = pricingPlans.map((plan, i) => {
-          const price = isYearly ? plan.priceYearly : plan.priceMonthly;
-          const period = isYearly ? 'per year' : 'per month';
-          const savings = isYearly ? '<span class="text-xs text-green-400 block">Save 20%</span>' : '';
+          // If yearly toggle is ON -> show AMC price, else show One Time price
+          const price = isYearly ? plan.priceYearlyAMC : plan.priceOneTime;
+          const period = isYearly ? '/ year (AMC)' : 'one time';
+          const savings = isYearly ? 
+            '<span class="text-xs text-green-400 block">Hosting + Maintenance</span>' : 
+            '<span class="text-xs text-green-400 block">No Recurring Fees</span>';
           return `
             <div class="premium-card p-8 rounded-2xl text-center reveal ${plan.featured ? 'border-[#D4AF37] border-2' : ''}" style="transition-delay: ${i * 120}ms" role="listitem">
               ${plan.featured ? '<span class="inline-block bg-[#D4AF37] text-black text-[8px] font-bold uppercase tracking-[0.2em] px-3 py-1 rounded-full mb-4">Popular</span>' : ''}
@@ -703,6 +760,8 @@
             </div>
           `;
         }).join('');
+        // FIX: add 'active' class so cards become visible immediately
+        grid.querySelectorAll('.premium-card').forEach(el => el.classList.add('active'));
       }
 
       function renderProcess() {
@@ -735,15 +794,16 @@
         `).join('');
       }
 
+      // ===== FIXED FAQ: responsive layout with wrapping =====
       function renderFaq() {
         const container = document.getElementById('faqContainer');
         if (!container) return;
         container.innerHTML = faqItems.map((item, index) => `
-          <div class="faq-item premium-card p-6 rounded-2xl cursor-pointer border border-[#1F1F1F] transition-all" role="listitem">
-            <div class="faq-header flex justify-between items-center" role="button" tabindex="0" aria-expanded="false" aria-controls="faqContent${index}">
-              <h4 class="text-white font-medium text-left">${item.q}</h4>
-              <span class="text-[#888] text-xs ml-4 whitespace-nowrap">${item.h}</span>
-              <i data-lucide="chevron-down" class="w-5 h-5 text-[#D4AF37] transition-transform duration-300 ml-2 flex-shrink-0" aria-hidden="true"></i>
+          <div class="faq-item premium-card p-5 md:p-6 rounded-2xl cursor-pointer border border-[#1F1F1F] transition-all" role="listitem">
+            <div class="faq-header-custom" role="button" tabindex="0" aria-expanded="false" aria-controls="faqContent${index}">
+              <span class="faq-q">${item.q}</span>
+              <span class="faq-h">${item.h}</span>
+              <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-[#D4AF37] transition-transform duration-300" aria-hidden="true"></i>
             </div>
             <div class="faq-wrapper" id="faqContent${index}" role="region" aria-hidden="true">
               <div class="faq-inner pt-4 text-[#aaa] text-sm italic">${item.a}</div>
@@ -752,14 +812,14 @@
         `).join('');
 
         document.querySelectorAll('.faq-item').forEach(item => {
-          const header = item.querySelector('.faq-header');
+          const header = item.querySelector('.faq-header-custom');
           const content = item.querySelector('.faq-wrapper');
           const icon = item.querySelector('[data-lucide="chevron-down"]');
           const toggle = () => {
             document.querySelectorAll('.faq-item').forEach(el => {
               if (el !== item) {
                 el.querySelector('.faq-wrapper').classList.remove('open');
-                el.querySelector('.faq-header').setAttribute('aria-expanded', 'false');
+                el.querySelector('.faq-header-custom').setAttribute('aria-expanded', 'false');
                 el.querySelector('.faq-wrapper').setAttribute('aria-hidden', 'true');
                 const otherIcon = el.querySelector('[data-lucide="chevron-down"]');
                 if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
@@ -789,7 +849,6 @@
         document.getElementById('mobileBookBtn')
       ];
 
-      // Also close mobile menu when modal opens (avoid overlapping)
       const mobileNav = document.getElementById('mobileNav');
       const menuToggle = document.getElementById('menuToggle');
 
@@ -812,7 +871,6 @@
       }
 
       function openModal() {
-        // Ensure mobile menu is closed before opening modal
         if (mobileNav.classList.contains('open')) toggleMenu(false);
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -837,7 +895,6 @@
         const message = document.getElementById('popupMessage').value.trim();
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        // Hide all errors first
         document.querySelectorAll('#popupNameError, #popupEmailError, #popupPhoneError').forEach(el => el.classList.add('hidden'));
         let valid = true;
         if (!name) { document.getElementById('popupNameError').classList.remove('hidden'); valid = false; }
@@ -845,14 +902,13 @@
         if (!phone) { document.getElementById('popupPhoneError').classList.remove('hidden'); valid = false; }
         if (!valid) return;
 
-        // Replace the number below with your actual WhatsApp number (with country code)
         const whatsappMsg = `*New Consultation Request*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Project Details:* ${message || 'Not provided'}`;
         window.open(`https://wa.me/919876543210?text=${whatsappMsg}`, '_blank');
         closeModal();
         popupForm.reset();
       });
 
-      // ========= CONTACT FORM (with consent validation) =========
+      // ========= CONTACT FORM =========
       function initForm() {
         const form = document.getElementById('contactForm');
         if (!form) return;
@@ -862,7 +918,6 @@
 
         const validate = () => {
           let valid = true;
-          // Name
           const name = document.getElementById('name');
           const nameErr = document.getElementById('nameError');
           if (!name.value.trim()) {
@@ -873,7 +928,6 @@
             name.setAttribute('aria-invalid', 'false');
             nameErr.classList.add('hidden');
           }
-          // Email
           const email = document.getElementById('email');
           const emailErr = document.getElementById('emailError');
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -885,7 +939,6 @@
             email.setAttribute('aria-invalid', 'false');
             emailErr.classList.add('hidden');
           }
-          // Message
           const message = document.getElementById('message');
           const messageErr = document.getElementById('messageError');
           if (!message.value.trim()) {
@@ -896,7 +949,6 @@
             message.setAttribute('aria-invalid', 'false');
             messageErr.classList.add('hidden');
           }
-          // Consent checkbox
           if (!consent.checked) {
             consent.setAttribute('aria-invalid', 'true');
             consentError.classList.remove('hidden');
@@ -908,7 +960,6 @@
           return valid;
         };
 
-        // Clear errors on input
         ['name', 'email', 'message'].forEach(id => {
           const input = document.getElementById(id);
           if (input) {
@@ -938,11 +989,8 @@
           submitBtn.disabled = true;
           feedback.classList.add('hidden');
 
-          // For production Netlify: remove preventDefault and fetch, let form submit normally.
-          // This demo uses fetch to simulate success; replace with real endpoint if needed.
           const formData = new FormData(form);
           try {
-            // In a real Netlify setup, just do form.submit() and remove this fetch.
             await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(formData).toString() });
             showSuccess(submitBtn, originalText, 'Thank you! We’ll get back to you shortly.');
           } catch {
@@ -957,7 +1005,6 @@
           feedback.textContent = msg;
           feedback.classList.remove('hidden');
           form.reset();
-          // Also hide consent error just in case
           consentError.classList.add('hidden');
           setTimeout(() => {
             btn.textContent = originalText;
@@ -1000,27 +1047,19 @@
       }
 
       function initMobileMenu() {
-        // Already partly handled via toggleMenu above, but need to set up event listeners for menu toggle
         const toggleBtn = document.getElementById('menuToggle');
         if (!toggleBtn || !mobileNav) return;
-
         toggleBtn.addEventListener('click', () => toggleMenu());
-
-        // Close menu on link click (except the booking button)
         mobileNav.querySelectorAll('a:not(#mobileBookBtn), button:not(#mobileBookBtn)').forEach(el => {
           el.addEventListener('click', () => {
             if (mobileNav.classList.contains('open')) toggleMenu(false);
           });
         });
-
-        // ESC key
         document.addEventListener('keydown', e => {
           if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
             toggleMenu(false);
           }
         });
-
-        // Focus trap inside mobile nav
         mobileNav.addEventListener('keydown', e => {
           if (e.key === 'Tab') {
             const focusable = mobileNav.querySelectorAll('a, button');
@@ -1089,7 +1128,7 @@
         renderServices();
         renderCategoryFilters();
         renderProjects();
-        renderPricing();
+        renderPricing(); // Default: One Time
         renderProcess();
         renderTestimonials();
         renderFaq();

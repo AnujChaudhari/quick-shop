@@ -7,23 +7,23 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <title>Quick Shop – Premium Web Development Agency | By Anuj Chaudhary</title>
-  <meta name="description" content="High-performance, conversion-focused websites for elite brands. Crafted by Quick Shop.">
-  <link rel="canonical" href="https://yourdomain.com/">
+  <title>Quick Shop – AI-Powered Websites &amp; 24/7 ChatBots | By Anuj Chaudhary</title>
+  <meta name="description" content="24/7 AI ChatBots and high-converting websites for Indian Dental Clinics, Doctors, Coaching Institutes &amp; Local Businesses. Delivered in 3 days.">
+  <link rel="canonical" href="https://anujchaudhari.github.io/quick-shop/">
   <meta name="robots" content="index, follow">
 
-  <meta property="og:title" content="Quick Shop – Premium Web Development Agency">
-  <meta property="og:description" content="High-performance, conversion-focused websites for elite brands.">
+  <meta property="og:title" content="Quick Shop – Building AI-Powered Digital Systems">
+  <meta property="og:description" content="24/7 AI Chatbots &amp; High-Converting Websites for Clinics, Coaching Institutes &amp; Growing Brands.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.com/">
-  <meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+  <meta property="og:url" content="https://anujchaudhari.github.io/quick-shop/">
+  <meta property="og:image" content="https://anujchaudhari.github.io/quick-shop/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Quick Shop – Premium Web Development Agency">
-  <meta name="twitter:description" content="High-performance, conversion-focused websites for elite brands.">
-  <meta name="twitter:image" content="https://yourdomain.com/og-image.jpg">
+  <meta name="twitter:title" content="Quick Shop – Building AI-Powered Digital Systems">
+  <meta name="twitter:description" content="24/7 AI Chatbots &amp; High-Converting Websites for Clinics, Coaching Institutes &amp; Growing Brands.">
+  <meta name="twitter:image" content="https://anujchaudhari.github.io/quick-shop/og-image.jpg">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>">
 
@@ -32,18 +32,16 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Quick Shop",
-      "description": "Premium web development agency delivering high-performance websites.",
-      "url": "https://yourdomain.com/",
-      "logo": "https://yourdomain.com/logo.png",
+      "description": "24/7 AI ChatBots and high-converting websites for Indian clinics, coaching institutes, and local businesses.",
+      "url": "https://anujchaudhari.github.io/quick-shop/",
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "hello@yourdomain.com",
+        "telephone": "+91-74411-67537",
+        "email": "thinklabviews@gmail.com",
         "availableLanguage": ["English", "Hindi"]
       },
       "sameAs": [
-        "https://twitter.com/yourhandle",
-        "https://linkedin.com/company/yourcompany",
-        "https://github.com/yourhandle"
+        "https://github.com/AnujChaudhari/"
       ]
     }
   </script>
@@ -123,8 +121,17 @@
       transition: all 0.45s cubic-bezier(0.2,0.8,0.2,1);
     }
     .premium-card:hover {
-      border-color: rgba(212,175,55,0.3); transform: translateY(-6px);
+      border-color: rgba(212,175,55,0.45); transform: translateY(-6px);
       box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+    }
+    .guarantee-card {
+      background: linear-gradient(180deg, var(--surface) 0%, var(--base) 100%);
+      border: 1px solid rgba(212,175,55,0.55);
+      transition: all 0.45s cubic-bezier(0.2,0.8,0.2,1);
+    }
+    .guarantee-card:hover {
+      border-color: var(--gold); transform: translateY(-6px);
+      box-shadow: 0 20px 40px -10px rgba(212,175,55,0.15);
     }
     .btn-primary {
       background: linear-gradient(135deg, #D4AF37, #997A15); color: #000;
@@ -160,24 +167,30 @@
     .back-to-top {
       opacity: 0; visibility: hidden; transition: all 0.3s; transform: translateY(20px);
       background: var(--gold); color: #000; border: none; border-radius: 9999px;
-      padding: 0.75rem; cursor: pointer; box-shadow: 0 10px 30px rgba(212,175,55,0.3); z-index: 50;
+      padding: 0.75rem; cursor: pointer; box-shadow: 0 10px 30px rgba(212,175,55,0.3); z-index: 49;
     }
     .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
     .back-to-top:hover { transform: scale(1.1); }
     .back-to-top:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
-    .trust-logo {
-      filter: grayscale(1) brightness(2); opacity: 0.6; transition: all 0.3s; user-select: none;
+    .whatsapp-float {
+      background: #25D366; color: #fff; border-radius: 9999px;
+      width: 56px; height: 56px; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+      transition: transform 0.3s ease, box-shadow 0.3s ease; z-index: 50;
     }
-    .trust-logo:hover { filter: grayscale(0) brightness(1); opacity: 1; }
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 14px 34px rgba(37, 211, 102, 0.5);
+    }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
       .reveal { opacity: 1; transform: none; }
       html { scroll-behavior: auto; }
     }
     @media print {
-      .glass-nav, .back-to-top, .mobile-nav, #menuToggle, .btn-primary, .btn-secondary { display: none !important; }
+      .glass-nav, .back-to-top, .whatsapp-float, .mobile-nav, #menuToggle, .btn-primary, .btn-secondary { display: none !important; }
       body { background: #fff !important; color: #000 !important; }
-      .premium-card { border: 1px solid #ccc !important; box-shadow: none !important; }
+      .premium-card, .guarantee-card { border: 1px solid #ccc !important; box-shadow: none !important; }
       .reveal { opacity: 1 !important; transform: none !important; }
     }
     .scroll-mt-28 { scroll-margin-top: 7rem; }
@@ -194,36 +207,6 @@
       position: fixed; top: 0; left: 0; width: 100%; height: 100%;
       z-index: -2; opacity: 0.3; pointer-events: none;
     }
-    /* Modal Popup */
-    .modal-overlay {
-      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
-      z-index: 10000; align-items: center; justify-content: center; padding: 1rem;
-    }
-    .modal-overlay.active { display: flex; }
-    .modal-box {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 1.5rem; padding: 2rem; max-width: 500px; width: 100%;
-      box-shadow: 0 30px 50px rgba(0,0,0,0.7);
-      position: relative; animation: modalSlideIn 0.3s ease-out;
-    }
-    @keyframes modalSlideIn {
-      from { opacity: 0; transform: scale(0.9) translateY(20px); }
-      to { opacity: 1; transform: scale(1) translateY(0); }
-    }
-    .modal-close {
-      position: absolute; top: 1rem; right: 1rem;
-      color: var(--muted); background: none; border: none; cursor: pointer;
-      font-size: 1.5rem; transition: color 0.3s;
-    }
-    .modal-close:hover { color: var(--gold); }
-    .modal-input {
-      background: var(--panel); border: 1px solid var(--border);
-      color: var(--light); padding: 0.75rem 1rem; border-radius: 0.75rem;
-      width: 100%; margin-top: 0.5rem; transition: border 0.3s;
-    }
-    .modal-input:focus { border-color: var(--gold); outline: none; }
-    .modal-label { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
     .error-text { color: #f87171; font-size: 0.7rem; margin-top: 0.25rem; }
 
     /* FAQ layout */
@@ -266,42 +249,6 @@
   <!-- Enhanced 3D Background Canvas -->
   <canvas id="bg-canvas"></canvas>
 
-  <!-- Modal Popup -->
-  <div class="modal-overlay" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-box">
-      <button class="modal-close" id="closeModal" aria-label="Close popup">&times;</button>
-      <h3 id="modalTitle" class="text-2xl font-display italic text-white mb-2">Book Free <span class="text-[#D4AF37]">Consultation</span></h3>
-      <p class="text-[#888] text-sm mb-6">We’ll get back to you within 24 hours.</p>
-      <form id="popupForm" novalidate>
-        <div class="space-y-4">
-          <div>
-            <label for="popupName" class="modal-label">Full Name *</label>
-            <input type="text" id="popupName" class="modal-input" placeholder="John Doe" required autocomplete="name">
-            <div class="error-text hidden" id="popupNameError">Please enter your name.</div>
-          </div>
-          <div>
-            <label for="popupEmail" class="modal-label">Email Address *</label>
-            <input type="email" id="popupEmail" class="modal-input" placeholder="john@example.com" required autocomplete="email">
-            <div class="error-text hidden" id="popupEmailError">Please enter a valid email.</div>
-          </div>
-          <div>
-            <label for="popupPhone" class="modal-label">Phone Number *</label>
-            <input type="tel" id="popupPhone" class="modal-input" placeholder="+91 98765 43210" required autocomplete="tel">
-            <div class="error-text hidden" id="popupPhoneError">Please enter your phone number.</div>
-          </div>
-          <div>
-            <label for="popupMessage" class="modal-label">Project Details</label>
-            <textarea id="popupMessage" class="modal-input" rows="3" placeholder="Tell us about your project..."></textarea>
-          </div>
-          <button type="submit" class="btn-primary w-full py-3 rounded-xl font-bold uppercase tracking-wider">
-            Send via WhatsApp
-          </button>
-          <p class="text-[10px] text-[#555] text-center mt-2">By sending, you agree to our Privacy Policy.</p>
-        </div>
-      </form>
-    </div>
-  </div>
-
   <!-- Header -->
   <header id="navbar" class="fixed top-0 w-full z-50 px-4 pt-6 transition-transform duration-300" role="banner">
     <div class="max-w-7xl mx-auto glass-nav rounded-2xl px-6 py-4 flex items-center justify-between shadow-2xl relative">
@@ -311,26 +258,26 @@
       </a>
       <nav class="hidden lg:flex gap-8 text-[11px] font-bold uppercase tracking-[0.15em] text-[#888]" aria-label="Main menu">
         <a href="#services" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="services">Services</a>
-        <a href="#work" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="work">Work</a>
+        <a href="#work" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="work">Live Demos</a>
         <a href="#pricing" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="pricing">Pricing</a>
-        <a href="#testimonials" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="testimonials">Testimonials</a>
+        <a href="#guarantee" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="guarantee">Guarantee</a>
         <a href="#faq" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="faq">FAQ</a>
         <a href="#contact" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="contact">Contact</a>
       </nav>
       <div class="flex items-center gap-4">
-        <button id="heroCta" class="hidden md:inline-flex btn-primary px-6 py-2.5 rounded-lg text-[10px] font-bold uppercase tracking-[0.15em]">Book Free Consultation</button>
+        <a id="heroCta" href="https://wa.me/917441167537?text=Hi%20Anuj,%20maine%20Quick%20Shop%20dekha.%20Mujhe%20apne%20business%20ke%20liye%20free%201-min%20demo%20chahiye." target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex btn-primary px-6 py-2.5 rounded-lg text-[10px] font-bold uppercase tracking-[0.15em]">Get Free 1-Min Demo</a>
         <button id="menuToggle" class="lg:hidden bg-white text-black p-2.5 rounded-xl transition-transform active:scale-95" aria-label="Toggle navigation menu" aria-expanded="false">
           <i data-lucide="menu" class="w-6 h-6" aria-hidden="true"></i>
         </button>
       </div>
       <div id="mobileNav" class="mobile-nav lg:hidden absolute top-full left-0 right-0 glass-nav rounded-b-2xl px-6 py-4 shadow-2xl" role="dialog" aria-modal="true" aria-label="Mobile navigation">
         <a href="#services" class="nav-link text-[11px] font-bold uppercase tracking-[0.15em] text-[#888] hover:text-[#D4AF37] py-2" data-section="services">Services</a>
-        <a href="#work" class="nav-link text-[11px] font-bold uppercase tracking-[0.15em] text-[#888] hover:text-[#D4AF37] py-2" data-section="work">Work</a>
+        <a href="#work" class="nav-link text-[11px] font-bold uppercase tracking-[0.15em] text-[#888] hover:text-[#D4AF37] py-2" data-section="work">Live Demos</a>
         <a href="#pricing" class="nav-link text-[11px] font-bold uppercase tracking-[0.15em] text-[#888] hover:text-[#D4AF37] py-2" data-section="pricing">Pricing</a>
-        <a href="#testimonials" class="nav-link text-[11px] font-bold uppercase tracking-[0.15em] text-[#888] hover:text-[#D4AF37] py-2" data-section="testimonials">Testimonials</a>
+        <a href="#guarantee" class="nav-link text-[11px] font-bold uppercase tracking-[0.15em] text-[#888] hover:text-[#D4AF37] py-2" data-section="guarantee">Guarantee</a>
         <a href="#faq" class="nav-link text-[11px] font-bold uppercase tracking-[0.15em] text-[#888] hover:text-[#D4AF37] py-2" data-section="faq">FAQ</a>
         <a href="#contact" class="nav-link text-[11px] font-bold uppercase tracking-[0.15em] text-[#888] hover:text-[#D4AF37] py-2" data-section="contact">Contact</a>
-        <button id="mobileBookBtn" class="btn-primary text-center px-6 py-3 rounded-lg text-[10px] font-bold uppercase tracking-[0.15em] mt-2">Book Free Consultation</button>
+        <a id="mobileBookBtn" href="https://wa.me/917441167537?text=Hi%20Anuj,%20maine%20Quick%20Shop%20dekha.%20Mujhe%20apne%20business%20ke%20liye%20free%201-min%20demo%20chahiye." target="_blank" rel="noopener noreferrer" class="btn-primary text-center px-6 py-3 rounded-lg text-[10px] font-bold uppercase tracking-[0.15em] mt-2">Get Free 1-Min Demo</a>
       </div>
     </div>
   </header>
@@ -339,34 +286,36 @@
     <!-- Hero -->
     <section id="hero" class="scroll-mt-28 min-h-screen flex items-center justify-center pt-32 pb-20 px-6 relative overflow-hidden">
       <div class="max-w-5xl text-center space-y-8 reveal active relative z-10">
-        <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-bold leading-[1] text-white">
-          Building Modern <br><span class="font-display italic text-[#D4AF37]">Digital Experiences</span>
+        <h1 class="text-[clamp(2.5rem,7.5vw,5rem)] font-bold leading-[1.05] text-white">
+          Building AI-Powered <br><span class="font-display italic text-[#D4AF37]">Digital Systems</span>
         </h1>
-        <p class="text-[#888] text-lg max-w-lg mx-auto font-light">Premium design & development for elite brands. Crafted with precision.</p>
+        <p class="text-[#888] text-lg max-w-2xl mx-auto font-light">24/7 AI Chatbots &amp; High-Converting Websites for Clinics, Coaching Institutes &amp; Growing Brands.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button class="btn-primary px-10 py-4 rounded-xl text-xs font-bold uppercase tracking-[0.1em]" id="heroBookBtn">Book Free Consultation</button>
-          <a href="#work" class="btn-secondary px-10 py-4 rounded-xl text-xs font-bold uppercase tracking-[0.1em]">View Our Work</a>
+          <a id="heroBookBtn" href="https://wa.me/917441167537?text=Hi%20Anuj,%20maine%20Quick%20Shop%20dekha.%20Mujhe%20apne%20business%20ke%20liye%20free%201-min%20demo%20chahiye." target="_blank" rel="noopener noreferrer" class="btn-primary px-10 py-4 rounded-xl text-xs font-bold uppercase tracking-[0.1em]">Get Free 1-Min Demo</a>
+          <a href="#work" class="btn-secondary px-10 py-4 rounded-xl text-xs font-bold uppercase tracking-[0.1em]">View Live Demos</a>
         </div>
-        <p class="text-[#555] text-xs mt-4">⚡ No commitment. Get a quote in 24 hours.</p>
-        <div class="flex justify-center gap-6 text-xs text-[#666]">
-          <span>⭐ 4.9/5 average rating</span>
-          <span>•</span>
-          <span>🏆 500+ projects delivered</span>
+        <div class="flex flex-wrap justify-center items-center gap-x-5 gap-y-2 text-xs text-[#888] pt-2">
+          <span>⚡ 3-Day Fast Delivery</span>
+          <span class="text-[#D4AF37]" aria-hidden="true">•</span>
+          <span>🤖 24/7 AI Auto-Booking</span>
+          <span class="text-[#D4AF37]" aria-hidden="true">•</span>
+          <span>📱 100% Mobile Optimized</span>
         </div>
       </div>
     </section>
 
     <!-- Trust Bar -->
-    <section class="py-12 border-t border-b border-[#1F1F1F] bg-[#0A0A0A]" aria-label="Brands we work with">
+    <section class="py-12 border-t border-b border-[#1F1F1F] bg-[#0A0A0A]" aria-label="Industries we serve">
       <div class="max-w-7xl mx-auto text-center px-6">
-        <p class="text-[#666] text-[10px] uppercase tracking-[0.2em] mb-8">Trusted by 500+ brands worldwide</p>
-        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-          <span class="trust-logo text-white font-bold text-2xl tracking-widest" aria-hidden="true">Google</span>
-          <span class="trust-logo text-white font-bold text-2xl tracking-widest" aria-hidden="true">Meta</span>
-          <span class="trust-logo text-white font-bold text-2xl tracking-widest" aria-hidden="true">Microsoft</span>
-          <span class="trust-logo text-white font-bold text-2xl tracking-widest" aria-hidden="true">Shopify</span>
-          <span class="trust-logo text-white font-bold text-2xl tracking-widest" aria-hidden="true">Stripe</span>
-          <span class="trust-logo text-white font-bold text-2xl tracking-widest" aria-hidden="true">Slack</span>
+        <p class="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.22em] mb-6">Built for High-Growth Indian Businesses</p>
+        <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-sm md:text-base font-medium text-[#EBEBEB]">
+          <span>Dental &amp; Health Clinics</span>
+          <span class="text-[#D4AF37]" aria-hidden="true">•</span>
+          <span>Coaching Institutes</span>
+          <span class="text-[#D4AF37]" aria-hidden="true">•</span>
+          <span>Real Estate &amp; Finance</span>
+          <span class="text-[#D4AF37]" aria-hidden="true">•</span>
+          <span>Local Service Brands</span>
         </div>
       </div>
     </section>
@@ -376,7 +325,7 @@
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
           <h2 id="services-title" class="text-3xl md:text-4xl font-display italic text-white">What We <span class="text-[#D4AF37]">Deliver</span></h2>
-          <p class="text-[#888] mt-4">Crafted services to elevate your digital presence.</p>
+          <p class="text-[#888] mt-4">Revenue-focused digital systems engineered to capture leads and book appointments.</p>
         </div>
         <div id="servicesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" role="list"></div>
       </div>
@@ -387,7 +336,7 @@
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
           <h2 id="work-title" class="text-3xl md:text-4xl font-display italic text-white">Featured <span class="text-[#D4AF37]">Projects</span></h2>
-          <p class="text-[#888] mt-4">Real results for real brands.</p>
+          <p class="text-[#888] mt-4">Click any project below to experience the live working demo.</p>
           <div id="categoryFilters" class="flex flex-wrap justify-center gap-2 mt-6" role="tablist" aria-label="Filter projects by category"></div>
         </div>
         <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list"></div>
@@ -399,7 +348,7 @@
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
           <h2 id="pricing-title" class="text-3xl md:text-4xl font-display italic text-white">Simple, <span class="text-[#D4AF37]">Transparent</span> Pricing</h2>
-          <p class="text-[#888] mt-4">One-time payment. No recurring charges. Yearly AMC covers hosting &amp; support.</p>
+          <p class="text-[#888] mt-4">One-time investment. No hidden fees. Optional Yearly AMC covers hosting, SSL &amp; priority maintenance.</p>
           <div class="flex justify-center items-center gap-4 mt-6">
             <span class="text-sm text-[#888] font-medium">One Time</span>
             <button id="pricingToggle" class="relative w-14 h-8 bg-[#1F1F1F] rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" role="switch" aria-checked="false" aria-label="Toggle between one time and yearly AMC pricing">
@@ -407,7 +356,7 @@
             </button>
             <span class="text-sm text-[#888] font-medium">Yearly (AMC) <span class="text-[#D4AF37] text-xs font-bold ml-1">Hosting + Maintenance</span></span>
           </div>
-          <p class="text-[#555] text-xs mt-4">* All prices in INR, exclusive of GST (18% as applicable).</p>
+          <p class="text-[#555] text-xs mt-4">* All prices in INR. 50% to start, 50% only after your live site is approved.</p>
         </div>
         <div id="pricingGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8" role="list"></div>
       </div>
@@ -418,20 +367,20 @@
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
           <h2 id="process-title" class="text-3xl md:text-4xl font-display italic text-white">How We <span class="text-[#D4AF37]">Work</span></h2>
-          <p class="text-[#888] mt-4">A streamlined process from idea to launch.</p>
+          <p class="text-[#888] mt-4">From your business details to a live AI-powered system in 72 hours.</p>
         </div>
         <div id="processGrid" class="grid grid-cols-1 md:grid-cols-4 gap-6" role="list"></div>
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="scroll-mt-28 py-24 px-6 bg-[#0A0A0A] border-t border-[#1F1F1F]" aria-labelledby="testimonials-title">
+    <!-- Zero-Risk Partner Guarantee -->
+    <section id="guarantee" class="scroll-mt-28 py-24 px-6 bg-[#0A0A0A] border-t border-[#1F1F1F]" aria-labelledby="guarantee-title">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
-          <h2 id="testimonials-title" class="text-3xl md:text-4xl font-display italic text-white">Client <span class="text-[#D4AF37]">Love</span></h2>
-          <p class="text-[#888] mt-4">What our partners say about us.</p>
+          <h2 id="guarantee-title" class="text-3xl md:text-4xl font-display italic text-white">Zero-Risk <span class="text-[#D4AF37]">Partner Guarantee</span></h2>
+          <p class="text-[#888] mt-4">Complete peace of mind before you invest a single rupee.</p>
         </div>
-        <div id="testimonialsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8" role="list"></div>
+        <div id="guaranteeGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8" role="list"></div>
       </div>
     </section>
 
@@ -439,7 +388,7 @@
     <section id="faq" class="scroll-mt-28 py-24 px-6 bg-[#0A0A0A] border-t border-[#1F1F1F]" aria-labelledby="faq-title">
       <div class="max-w-3xl mx-auto text-center mb-16">
         <h2 id="faq-title" class="text-3xl md:text-4xl font-display italic text-white">Frequently Asked <span class="text-[#D4AF37]">Questions</span></h2>
-        <p class="text-[#888] mt-4">Everything you need to know.</p>
+        <p class="text-[#888] mt-4">Clear answers in English &amp; Hinglish.</p>
       </div>
       <div class="max-w-3xl mx-auto space-y-4" id="faqContainer" role="list"></div>
     </section>
@@ -448,7 +397,7 @@
     <section id="contact" class="scroll-mt-28 py-24 px-6" aria-labelledby="contact-title">
       <div class="max-w-4xl mx-auto text-center mb-16">
         <h2 id="contact-title" class="text-3xl md:text-4xl font-display italic text-white">Let's <span class="text-[#D4AF37]">Connect</span></h2>
-        <p class="text-[#888] mt-4">Ready to start your next project? Reach out today.</p>
+        <p class="text-[#888] mt-4">Ready to automate inquiries and grow your bookings? Message directly on WhatsApp.</p>
       </div>
       <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8">
         <div class="lg:col-span-3 premium-card p-8 md:p-12 rounded-3xl">
@@ -456,26 +405,26 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="name" class="block text-xs uppercase tracking-[0.1em] text-[#888] mb-1">Full Name <span class="text-red-400">*</span></label>
-                <input type="text" id="name" name="name" placeholder="John Doe" class="input-lux p-4 rounded-lg" required autocomplete="name">
+                <input type="text" id="name" name="name" placeholder="Dr. Sharma / Coaching Director" class="input-lux p-4 rounded-lg" required autocomplete="name">
                 <div class="error-text hidden" id="nameError">Please enter your name.</div>
               </div>
               <div>
                 <label for="email" class="block text-xs uppercase tracking-[0.1em] text-[#888] mb-1">Email Address <span class="text-red-400">*</span></label>
-                <input type="email" id="email" name="email" placeholder="john@example.com" class="input-lux p-4 rounded-lg" required autocomplete="email">
+                <input type="email" id="email" name="email" placeholder="clinic@example.com" class="input-lux p-4 rounded-lg" required autocomplete="email">
                 <div class="error-text hidden" id="emailError">Please enter a valid email.</div>
               </div>
             </div>
             <div>
-              <label for="message" class="block text-xs uppercase tracking-[0.1em] text-[#888] mb-1">Your Message <span class="text-red-400">*</span></label>
-              <textarea id="message" name="message" placeholder="Tell us about your project..." class="input-lux p-4 rounded-lg" rows="5" required></textarea>
+              <label for="message" class="block text-xs uppercase tracking-[0.1em] text-[#888] mb-1">Your Business &amp; Goal <span class="text-red-400">*</span></label>
+              <textarea id="message" name="message" placeholder="e.g., Dental clinic in Indore — need a website + 24/7 AI appointment bot..." class="input-lux p-4 rounded-lg" rows="5" required></textarea>
               <div class="error-text hidden" id="messageError">Please enter your message.</div>
             </div>
             <div class="flex items-start gap-3">
               <input type="checkbox" id="consent" name="consent" required class="mt-1 w-4 h-4 accent-[#D4AF37]">
-              <label for="consent" class="text-xs text-[#888]">I agree to the <a href="#" class="text-[#D4AF37] hover:underline">Privacy Policy</a> and consent to receiving communications. <span class="text-red-400">*</span></label>
+              <label for="consent" class="text-xs text-[#888]">I agree to connect via WhatsApp / Email to receive my free 1-minute demo. <span class="text-red-400">*</span></label>
             </div>
             <div class="error-text hidden" id="consentError">You must agree before submitting.</div>
-            <button type="submit" class="btn-primary w-full py-4 rounded-lg font-bold uppercase tracking-[0.1em]">Send Inquiry</button>
+            <button type="submit" class="btn-primary w-full py-4 rounded-lg font-bold uppercase tracking-[0.1em]">Send Inquiry on WhatsApp</button>
             <div id="formFeedback" class="text-center text-sm hidden" role="status" aria-live="polite"></div>
           </form>
         </div>
@@ -485,7 +434,7 @@
             <ul class="space-y-4 text-sm text-[#aaa]">
               <li class="flex items-start gap-3">
                 <i data-lucide="mail" class="w-5 h-5 text-[#D4AF37] mt-0.5 flex-shrink-0"></i>
-                <span><a href="mailto:hello@yourdomain.com" class="hover:text-[#D4AF37] transition-colors">thinklabviews@gmail.com</a></span>
+                <span><a href="mailto:thinklabviews@gmail.com" class="hover:text-[#D4AF37] transition-colors">thinklabviews@gmail.com</a></span>
               </li>
               <li class="flex items-start gap-3">
                 <i data-lucide="phone" class="w-5 h-5 text-[#D4AF37] mt-0.5 flex-shrink-0"></i>
@@ -493,12 +442,11 @@
               </li>
               <li class="flex items-start gap-3">
                 <i data-lucide="map-pin" class="w-5 h-5 text-[#D4AF37] mt-0.5 flex-shrink-0"></i>
-                <span>India (Remote & On-site)</span>
+                <span>India (Serving Clinics &amp; Brands Pan-India)</span>
               </li>
             </ul>
             <div class="flex gap-4 mt-6">
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="text-[#888] hover:text-[#D4AF37] transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-[#888] hover:text-[#D4AF37] transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+              <a href="https://wa.me/917441167537?text=Hi%20Anuj,%20maine%20Quick%20Shop%20dekha.%20Mujhe%20apne%20business%20ke%20liye%20demo%20chahiye" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-[#888] hover:text-[#D4AF37] transition-colors"><i data-lucide="message-circle" class="w-5 h-5"></i></a>
               <a href="https://github.com/AnujChaudhari/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-[#888] hover:text-[#D4AF37] transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
             </div>
           </div>
@@ -513,9 +461,21 @@
     </section>
   </main>
 
-  <button id="backToTop" class="back-to-top fixed bottom-6 right-6 p-3 rounded-full shadow-2xl" aria-label="Back to top">
-    <i data-lucide="arrow-up" class="w-6 h-6" aria-hidden="true"></i>
+  <!-- Back to Top (stacked above floating WhatsApp button) -->
+  <button id="backToTop" class="back-to-top fixed bottom-24 right-6 p-3 rounded-full shadow-2xl" aria-label="Back to top">
+    <i data-lucide="arrow-up" class="w-5 h-5" aria-hidden="true"></i>
   </button>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/917441167537?text=Hi%20Anuj,%20maine%20Quick%20Shop%20dekha.%20Mujhe%20apne%20business%20ke%20liye%20demo%20chahiye"
+     target="_blank" rel="noopener noreferrer"
+     class="whatsapp-float fixed bottom-6 right-6"
+     aria-label="Chat on WhatsApp for a free demo"
+     title="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-7 h-7 fill-current" aria-hidden="true">
+      <path d="M16.004 2.667C8.64 2.667 2.667 8.64 2.667 16.004c0 2.356.615 4.656 1.785 6.683L2.56 29.44l6.924-1.816a13.275 13.275 0 0 0 6.52 1.714h.005c7.363 0 13.337-5.973 13.337-13.334 0-3.562-1.387-6.912-3.906-9.431a13.252 13.252 0 0 0-9.436-3.906zm7.752 18.884c-.329.927-1.915 1.771-2.668 1.884-.683.102-1.547.145-2.497-.157-.576-.183-1.316-.428-2.264-.837-3.984-1.72-6.586-5.736-6.786-6.002-.199-.267-1.621-2.156-1.621-4.113 0-1.957 1.024-2.92 1.388-3.318.364-.398.795-.498 1.06-.498.265 0 .53.003.762.014.244.012.572-.093.895.683.331.796 1.127 2.752 1.226 2.952.1.199.166.432.033.698-.132.266-.199.432-.398.665-.199.232-.419.519-.598.698-.199.199-.406.415-.175.814.232.398 1.032 1.703 2.216 2.759 1.522 1.358 2.806 1.779 3.204 1.978.398.199.63.166.862-.1.232-.266.995-1.162 1.26-1.561.265-.398.53-.332.895-.199.365.133 2.322 1.095 2.72 1.294.398.199.663.299.762.465.1.166.1.962-.229 1.889z"/>
+    </svg>
+  </a>
 
   <footer class="border-t border-[#1F1F1F] py-12 px-6 bg-[#0A0A0A]" role="contentinfo">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
@@ -526,15 +486,14 @@
       </div>
       <nav class="flex flex-wrap gap-8 text-[11px] font-bold uppercase tracking-[0.15em] text-[#666]" aria-label="Footer navigation">
         <a href="#services" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="services">Services</a>
-        <a href="#work" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="work">Work</a>
+        <a href="#work" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="work">Live Demos</a>
         <a href="#pricing" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="pricing">Pricing</a>
-        <a href="#testimonials" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="testimonials">Testimonials</a>
+        <a href="#guarantee" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="guarantee">Guarantee</a>
         <a href="#faq" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="faq">FAQ</a>
         <a href="#contact" class="nav-link hover:text-[#D4AF37] transition-colors" data-section="contact">Contact</a>
       </nav>
       <div class="flex gap-4">
-        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="text-[#666] hover:text-[#D4AF37] transition-colors"><i data-lucide="twitter" class="w-4 h-4"></i></a>
-        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-[#666] hover:text-[#D4AF37] transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+        <a href="https://wa.me/917441167537?text=Hi%20Anuj,%20maine%20Quick%20Shop%20dekha.%20Mujhe%20apne%20business%20ke%20liye%20demo%20chahiye" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-[#666] hover:text-[#D4AF37] transition-colors"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
         <a href="https://github.com/AnujChaudhari/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-[#666] hover:text-[#D4AF37] transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
       </div>
     </div>
@@ -567,21 +526,19 @@
         const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.5, 50);
         camera.position.z = 8;
 
-        // Particle system with multiple colours
         const particleCount = 1000;
         const geometry = new THREE.BufferGeometry();
         const positions = new Float32Array(particleCount * 3);
         const colors = new Float32Array(particleCount * 3);
 
         const colorPalette = [
-          new THREE.Color('#D4AF37'), // deep gold
-          new THREE.Color('#F9E596'), // light gold
-          new THREE.Color('#FFFFFF'), // white accent
-          new THREE.Color('#B8860B')  // darker gold
+          new THREE.Color('#D4AF37'),
+          new THREE.Color('#F9E596'),
+          new THREE.Color('#FFFFFF'),
+          new THREE.Color('#B8860B')
         ];
 
         for (let i = 0; i < particleCount; i++) {
-          // positions in a 3D box
           positions[i * 3] = (Math.random() - 0.5) * 15;
           positions[i * 3 + 1] = (Math.random() - 0.5) * 15;
           positions[i * 3 + 2] = (Math.random() - 0.5) * 12;
@@ -595,7 +552,6 @@
         geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
         geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
-        // Varying sizes (optional using a custom shader, but simple PointsMaterial with sizeAttenuation works)
         const material = new THREE.PointsMaterial({
           size: 0.08,
           vertexColors: true,
@@ -609,16 +565,13 @@
         const particles = new THREE.Points(geometry, material);
         scene.add(particles);
 
-        // Mouse parallax variables
         const mouse = { x: 0, y: 0 };
         let targetX = 0, targetY = 0;
         window.addEventListener('mousemove', (e) => {
-          // Normalize mouse position (-1 to 1)
           mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
           mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
         });
 
-        // Handle window resize
         window.addEventListener('resize', () => {
           camera.aspect = window.innerWidth / window.innerHeight;
           camera.updateProjectionMatrix();
@@ -628,22 +581,17 @@
         let animationId;
         function animate() {
           animationId = requestAnimationFrame(animate);
-
-          // Smooth camera movement based on mouse
           targetX = mouse.x * 0.5;
           targetY = mouse.y * 0.3;
           camera.position.x += (targetX - camera.position.x) * 0.05;
           camera.position.y += (targetY - camera.position.y) * 0.05;
           camera.lookAt(0, 0, 0);
 
-          // Slow automatic rotation of particles
           particles.rotation.x += 0.0002;
           particles.rotation.y += 0.0003;
-
           renderer.render(scene, camera);
         }
 
-        // Start animation only when canvas is visible
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -654,7 +602,6 @@
         }, { threshold: 0.1 });
         observer.observe(canvas);
 
-        // Pause when tab hidden
         document.addEventListener('visibilitychange', () => {
           if (document.hidden) {
             cancelAnimationFrame(animationId);
@@ -671,72 +618,199 @@
     (() => {
       'use strict';
 
+      const WHATSAPP_NUMBER = '917441167537';
+      const buildWaLink = (msg) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
       // ========= DATA =========
       const services = [
-        { icon: 'layout-template', title: 'Website Development', description: 'High-performance custom sites.' },
-        { icon: 'palette', title: 'UI/UX Design', description: 'Luxury user experiences.' },
-        { icon: 'search', title: 'SEO Optimization', description: 'Search engine dominance.' },
-        { icon: 'shopping-cart', title: 'E-Commerce', description: 'Conversion-focused shops.' }
+        {
+          icon: 'layout-template',
+          title: 'AI Website Development',
+          description: 'Fast, mobile-first websites designed to turn visitors into appointments.'
+        },
+        {
+          icon: 'bot',
+          title: '24/7 AI Receptionist Bot',
+          description: 'Answers patient/student FAQs & captures leads automatically while you sleep.'
+        },
+        {
+          icon: 'map-pin',
+          title: 'Google Maps & Local SEO',
+          description: 'Rank higher when customers search for clinics or coaching near them.'
+        },
+        {
+          icon: 'message-circle',
+          title: 'WhatsApp Auto-Booking',
+          description: 'Direct 1-click WhatsApp inquiry & appointment scheduling integration.'
+        }
       ];
 
       const projects = [
-        { title: 'Sudha Coaching', category: 'Education', img: 'sudha.png', url: 'https://anujchaudhari.github.io/sudhacoachingclasses/' },
-        { title: 'Sandeep Academy', category: 'Education', img: 'sandeep.png', url: 'https://sandeepcoaching-classes.netlify.app/' },
-        { title: 'Gyan Path System', category: 'Web App', img: 'gyanpath.png', url: 'https://anujchaudhari.github.io/GyanPath' },
-        { title: 'AI ChatBoat', category: 'AI UX', img: 'chatbot.png', url: 'https://anujchaudhari.github.io/ChatBoat' },
-        { title: 'Shine Native', category: 'App', img: 'shinenative.png', url: 'https://anujchaudhari.github.io/shinenative/' },
-        { title: 'Smile Care', category: 'Health', img: 'smilecare.png', url: 'https://anujchaudhari.github.io/smilecareclinicrewa/' },
-        { title: 'Best Dentist', category: 'Health', img: 'himanshu.png', url: 'https://anujchaudhari.github.io/BestDentistinSatna/' },
-        { title: 'Invest Portal', category: 'Finance', img: 'invest.png', url: 'https://anujchaudhari.github.io/invest/' },
-        { title: 'CSC Center', category: 'Govt', img: 'csc.png', url: 'https://anujchaudhari.github.io/csc-center-kemar/' }
+        {
+          title: 'Sudha Coaching',
+          category: 'Education',
+          result: 'Course & Student Inquiry Portal',
+          img: 'sudha.png',
+          url: 'https://anujchaudhari.github.io/sudhacoachingclasses/'
+        },
+        {
+          title: 'Sandeep Academy',
+          category: 'Education',
+          result: 'Batch Schedules & Direct Admission Capture',
+          img: 'sandeep.png',
+          url: 'https://sandeepcoaching-classes.netlify.app/'
+        },
+        {
+          title: 'Gyan Path System',
+          category: 'Web App',
+          result: 'Digital Learning & Student Management Hub',
+          img: 'gyanpath.png',
+          url: 'https://anujchaudhari.github.io/GyanPath'
+        },
+        {
+          title: 'AI ChatBot',
+          category: 'AI Automation',
+          result: '24/7 Automated FAQ & Lead Qualification Bot',
+          img: 'chatbot.png',
+          url: 'https://anujchaudhari.github.io/ChatBoat'
+        },
+        {
+          title: 'Shine Native',
+          category: 'App',
+          result: 'Fast Mobile-First Brand & Service Showcase',
+          img: 'shinenative.png',
+          url: 'https://anujchaudhari.github.io/shinenative/'
+        },
+        {
+          title: 'Smile Care',
+          category: 'Health',
+          result: 'Instant Appointment & Treatment Showcase',
+          img: 'smilecare.png',
+          url: 'https://anujchaudhari.github.io/smilecareclinicrewa/'
+        },
+        {
+          title: 'Best Dentist',
+          category: 'Health',
+          result: 'Local Patient Booking & Clinic Trust Portal',
+          img: 'himanshu.png',
+          url: 'https://anujchaudhari.github.io/BestDentistinSatna/'
+        },
+        {
+          title: 'Invest Portal',
+          category: 'Finance',
+          result: 'Client Inquiry & Financial Advisory Showcase',
+          img: 'invest.png',
+          url: 'https://anujchaudhari.github.io/invest/'
+        },
+        {
+          title: 'CSC Center',
+          category: 'Govt',
+          result: 'Local Citizen Services & Quick Document Guide',
+          img: 'csc.png',
+          url: 'https://anujchaudhari.github.io/csc-center-kemar/'
+        }
       ];
 
       const pricingPlans = [
         {
-          name: 'Starter',
-          priceOneTime: 4999,
-          priceYearlyAMC: 999,
-          features: ['1 Page Website', 'Mobile Responsive', 'Contact Form', 'Basic SEO Setup'],
-          cta: 'Get Started',
+          name: 'Growth Website',
+          priceOneTime: '₹14,999',
+          priceYearlyAMC: '₹18,999',
+          features: [
+            '5-Page Custom Mobile-First Website',
+            'Direct WhatsApp & Call Auto-Integration',
+            'Google Maps & Local SEO Setup',
+            '3 Days Express Delivery'
+          ],
+          cta: 'Select Growth Plan',
+          waMessage: 'Hi Anuj, main Growth Website plan (₹14,999) ke liye interested hoon. Mujhe apne business ke liye free demo dekhna hai.',
           featured: false
         },
         {
-          name: 'Business',
-          priceOneTime: 14999,
-          priceYearlyAMC: 2999,
-          features: ['5 Page Website', 'CMS Integration', 'Advanced SEO', 'Google Analytics', '30 Days Support'],
-          cta: 'Get Started',
+          name: 'AI Business System',
+          priceOneTime: '₹24,999',
+          priceYearlyAMC: '₹29,999',
+          features: [
+            'Everything in Growth Website',
+            '24/7 Custom AI ChatBot (Trained on your clinic/coaching FAQs)',
+            'Automated Lead & Appointment Capture',
+            '30 Days Priority Support & Updates'
+          ],
+          cta: 'Get AI System',
+          waMessage: 'Hi Anuj, main AI Business System plan (₹24,999) ke liye interested hoon. Mujhe website + 24/7 AI ChatBot ka demo chahiye.',
           featured: true
         },
         {
-          name: 'Enterprise',
-          priceOneTime: 49999,
-          priceYearlyAMC: 9999,
-          features: ['Unlimited Pages', 'Custom Development', 'E-Commerce Setup', 'Full SEO Suite', '1 Year Support'],
-          cta: 'Contact Us',
+          name: 'Custom Enterprise',
+          priceOneTime: '₹49,999+',
+          priceYearlyAMC: '₹59,999+',
+          features: [
+            'Full Custom Web App / Portal',
+            'Multi-Branch AI Automation & CRM',
+            'Full SEO Suite & 1 Year Dedicated Support'
+          ],
+          cta: 'Book Strategy Call',
+          waMessage: 'Hi Anuj, mujhe Custom Enterprise (₹49,999+) system ke baare mein strategy call book karni hai.',
           featured: false
         }
       ];
 
       const processSteps = [
-        { icon: 'compass', title: 'Discovery', description: 'We understand your vision, goals, and audience.' },
-        { icon: 'pen-tool', title: 'Design', description: 'Crafting pixel-perfect designs with your brand in mind.' },
-        { icon: 'code-2', title: 'Development', description: 'Building with clean, scalable, and performant code.' },
-        { icon: 'rocket', title: 'Launch', description: 'Deploy, test, and hand over with full support.' }
+        { icon: 'compass', title: '1. Free 1-Min Demo', description: 'See a tailored sample for your clinic or institute before committing.' },
+        { icon: 'pen-tool', title: '2. Brand & AI Setup', description: 'We design your pages and train your AI ChatBot on your exact FAQs.' },
+        { icon: 'code-2', title: '3. WhatsApp & SEO', description: '1-click WhatsApp booking, Google Maps, and mobile speed optimization.' },
+        { icon: 'rocket', title: '4. 72-Hour Launch', description: 'Review your live site, approve it, and start capturing leads 24/7.' }
       ];
 
-      const testimonials = [
-        { name: 'Priya Sharma', role: 'Founder, EduTech', text: 'Quick Shop transformed our online presence. Our conversion rates doubled within a month!', rating: 5, avatar: 'https://picsum.photos/seed/priya/100/100' },
-        { name: 'Rahul Verma', role: 'CEO, HealthPlus', text: 'Professional, fast, and results-driven. They built a site that truly represents our brand.', rating: 5, avatar: 'https://picsum.photos/seed/rahul/100/100' },
-        { name: 'Ananya Patel', role: 'Marketing Head, FinCorp', text: 'The attention to detail and user experience is unmatched. Highly recommend!', rating: 5, avatar: 'https://picsum.photos/seed/ananya/100/100' }
+      const guarantees = [
+        {
+          icon: 'monitor-play',
+          title: 'Free Demo First',
+          text: 'See a working sample tailored to your industry before paying a single rupee.'
+        },
+        {
+          icon: 'shield-check',
+          title: '50-50 Safe Payment',
+          text: 'Pay 50% to start, and the remaining 50% only after your site is live and approved.'
+        },
+        {
+          icon: 'zap',
+          title: '3-Day Launch',
+          text: 'From details to a fully live, mobile-ready system in just 72 hours.'
+        }
       ];
 
       const faqItems = [
-        { q: 'What is the project timeline?', h: 'Project complete hone me kitna time lagta hai?', a: 'Typically 2-4 weeks. / Lagbhag 2 se 4 hafte.' },
-        { q: 'Do you provide hosting?', h: 'Kya hosting dete hain?', a: 'Yes, we handle end-to-end setup. / Haan, hum full setup karte hain.' },
-        { q: 'Can I request changes after launch?', h: 'Kya launch ke baad changes kar sakte hain?', a: 'Yes, we offer post-launch support and maintenance packages. / Haan, hum launch ke baad support aur maintenance dete hain.' },
-        { q: 'What technologies do you use?', h: 'Kya technologies use karte hain?', a: 'We use modern technologies like React, Next.js, TailwindCSS, Node.js, and more.' },
-        { q: 'Do you offer SEO services?', h: 'Kya SEO services dete hain?', a: 'Yes, we provide comprehensive SEO to help you rank higher on search engines.' }
+        {
+          q: 'How does the AI ChatBot work?',
+          h: 'AI ChatBot kaise kaam karta hai?',
+          a: 'We train the AI on your clinic treatments, fees, timings, or coaching batches. It replies to visitors 24/7 in English & Hinglish and sends qualified leads directly to your WhatsApp. / Hum AI ko aapke business ki fees, timings aur FAQs par train karte hain — ye 24/7 patients ya students ko reply karta hai aur leads seedha aapke WhatsApp par bhejta hai.'
+        },
+        {
+          q: 'What is the project timeline?',
+          h: 'Project complete hone me kitna time lagta hai?',
+          a: 'Just 3 days (72 hours) for Growth Website & AI Business System once you share your details. / Aapki details milne ke baad sirf 3 din (72 hours) me website live ho jati hai.'
+        },
+        {
+          q: 'Do you provide hosting?',
+          h: 'Kya hosting dete hain?',
+          a: 'Yes, we handle end-to-end setup including domain, SSL, and fast hosting. / Haan, hum domain, SSL aur hosting ka full setup karte hain.'
+        },
+        {
+          q: 'Can I request changes after launch?',
+          h: 'Kya launch ke baad changes kar sakte hain?',
+          a: 'Yes, we include post-launch support and optional Yearly AMC maintenance packages. / Haan, hum launch ke baad support aur maintenance packages dete hain.'
+        },
+        {
+          q: 'What technologies do you use?',
+          h: 'Kya technologies use karte hain?',
+          a: 'We use modern, fast-loading technologies including HTML5, TailwindCSS, React, Next.js, and custom AI ChatBot workflows. / Hum fast aur modern technologies use karte hain jo mobile par instant load hoti hain.'
+        },
+        {
+          q: 'Do you offer Local SEO & Google Maps setup?',
+          h: 'Kya Google Maps aur Local SEO services dete hain?',
+          a: 'Yes, we optimize your site and Google Maps profile so local patients and students find you first. / Haan, hum Local SEO aur Google Maps optimize karte hain taki aapke area ke log aapko sabse pehle dhoondh sakein.'
+        }
       ];
 
       // ========= RENDER FUNCTIONS =========
@@ -747,7 +821,7 @@
           <article class="premium-card p-8 rounded-2xl text-center reveal" style="transition-delay: ${i * 100}ms" role="listitem">
             <i data-lucide="${s.icon}" class="w-10 h-10 text-[#D4AF37] mx-auto mb-4" aria-hidden="true"></i>
             <h4 class="text-white font-bold">${s.title}</h4>
-            <p class="text-[#888] text-xs mt-2">${s.description}</p>
+            <p class="text-[#888] text-xs mt-2 leading-relaxed">${s.description}</p>
           </article>
         `).join('');
       }
@@ -761,12 +835,18 @@
              class="premium-card block rounded-2xl group overflow-hidden reveal ${immediate ? 'active' : ''}"
              style="transition-delay: ${i * 80}ms" role="listitem">
             <img src="${p.img}" loading="lazy" decoding="async"
-                 class="w-full h-48 object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
-                 alt="${p.title}" width="600" height="400"
-                 onerror="this.src='https://via.placeholder.com/600x400?text=${encodeURIComponent(p.title)}'">
+                 class="w-full h-48 object-cover opacity-85 group-hover:scale-105 transition-transform duration-500"
+                 alt="${p.title} live demo preview" width="600" height="400"
+                 onerror="this.src='https://via.placeholder.com/600x400/111111/D4AF37?text=${encodeURIComponent(p.title)}'">
             <div class="p-6">
-              <h4 class="text-xl text-white group-hover:text-[#D4AF37] transition-colors">${p.title}</h4>
-              <p class="text-[#888] text-xs mt-1">${p.category}</p>
+              <div class="flex items-center justify-between gap-2">
+                <h4 class="text-xl text-white font-semibold group-hover:text-[#D4AF37] transition-colors">${p.title}</h4>
+                <span class="text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#1F1F1F] text-[#D4AF37] whitespace-nowrap">${p.category}</span>
+              </div>
+              <p class="text-[#aaa] text-xs mt-2">${p.result}</p>
+              <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-[#D4AF37] mt-4 group-hover:translate-x-1 transition-transform">
+                Open Live Demo <i data-lucide="external-link" class="w-3.5 h-3.5" aria-hidden="true"></i>
+              </span>
             </div>
           </a>
         `).join('');
@@ -798,6 +878,7 @@
           btn.setAttribute('aria-selected', 'true');
 
           renderProjects(cat, true);
+          refreshIcons();
         });
       }
 
@@ -806,23 +887,31 @@
         if (!grid) return;
         grid.innerHTML = pricingPlans.map((plan, i) => {
           const price = isYearly ? plan.priceYearlyAMC : plan.priceOneTime;
-          const period = isYearly ? '/ year (AMC)' : 'one time';
-          const savings = isYearly ?
-            '<span class="text-xs text-green-400 block">Hosting + Maintenance</span>' :
-            '<span class="text-xs text-green-400 block">No Recurring Fees</span>';
+          const period = isYearly ? 'One-Time + 1 Year AMC' : 'One-Time';
+          const badgeNote = isYearly
+            ? '<span class="text-xs text-green-400 block mt-1">Includes Hosting, SSL &amp; Yearly Maintenance</span>'
+            : '<span class="text-xs text-green-400 block mt-1">No Recurring Fees</span>';
+          const waHref = buildWaLink(
+            isYearly
+              ? `${plan.waMessage} (With Yearly AMC Bundle: ${price})`
+              : plan.waMessage
+          );
+
           return `
-            <div class="premium-card p-8 rounded-2xl text-center reveal ${plan.featured ? 'border-[#D4AF37] border-2' : ''}" style="transition-delay: ${i * 120}ms" role="listitem">
-              ${plan.featured ? '<span class="inline-block bg-[#D4AF37] text-black text-[8px] font-bold uppercase tracking-[0.2em] px-3 py-1 rounded-full mb-4">Popular</span>' : ''}
-              <h4 class="text-xl font-bold text-white">${plan.name}</h4>
-              <div class="my-4">
-                <span class="text-3xl font-bold text-[#D4AF37]">₹${price}</span>
-                <span class="text-[#888] text-xs block mt-1">${period}</span>
-                ${savings}
+            <div class="premium-card p-8 rounded-2xl text-center flex flex-col justify-between reveal ${plan.featured ? 'border-[#D4AF37] border-2 shadow-[0_0_30px_rgba(212,175,55,0.12)]' : ''}" style="transition-delay: ${i * 120}ms" role="listitem">
+              <div>
+                ${plan.featured ? '<span class="inline-block bg-[#D4AF37] text-black text-[9px] font-bold uppercase tracking-[0.2em] px-3 py-1 rounded-full mb-4">Popular</span>' : '<div class="h-6 mb-4"></div>'}
+                <h4 class="text-xl font-bold text-white">${plan.name}</h4>
+                <div class="my-5">
+                  <span class="text-4xl font-bold text-[#D4AF37]">${price}</span>
+                  <span class="text-[#888] text-xs block mt-1 uppercase tracking-wider">${period}</span>
+                  ${badgeNote}
+                </div>
+                <ul class="space-y-3 text-sm text-[#bbb] mb-8 text-left">
+                  ${plan.features.map(f => `<li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5" aria-hidden="true"></i><span>${f}</span></li>`).join('')}
+                </ul>
               </div>
-              <ul class="space-y-2 text-sm text-[#aaa] mb-6">
-                ${plan.features.map(f => `<li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#D4AF37]" aria-hidden="true"></i>${f}</li>`).join('')}
-              </ul>
-              <a href="#contact" class="btn-primary block py-3 rounded-lg text-xs font-bold uppercase tracking-[0.1em]">${plan.cta}</a>
+              <a href="${waHref}" target="_blank" rel="noopener noreferrer" class="btn-primary block py-3.5 rounded-lg text-xs font-bold uppercase tracking-[0.1em]">${plan.cta}</a>
             </div>
           `;
         }).join('');
@@ -843,18 +932,16 @@
         `).join('');
       }
 
-      function renderTestimonials() {
-        const grid = document.getElementById('testimonialsGrid');
+      function renderGuarantees() {
+        const grid = document.getElementById('guaranteeGrid');
         if (!grid) return;
-        grid.innerHTML = testimonials.map((t, i) => `
-          <div class="premium-card p-8 rounded-2xl text-center reveal" style="transition-delay: ${i * 100}ms" role="listitem">
-            <img src="${t.avatar}" loading="lazy" decoding="async" class="w-16 h-16 rounded-full mx-auto mb-4 object-cover" alt="${t.name}" width="64" height="64">
-            <div class="flex justify-center text-[#D4AF37] text-xl mb-4">${'★'.repeat(t.rating)}</div>
-            <p class="text-[#aaa] text-sm italic">"${t.text}"</p>
-            <div class="mt-4">
-              <p class="text-white font-bold">${t.name}</p>
-              <p class="text-[#666] text-xs">${t.role}</p>
+        grid.innerHTML = guarantees.map((g, i) => `
+          <div class="guarantee-card p-8 rounded-2xl text-center reveal" style="transition-delay: ${i * 100}ms" role="listitem">
+            <div class="w-14 h-14 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/40 flex items-center justify-center mx-auto mb-5">
+              <i data-lucide="${g.icon}" class="w-7 h-7 text-[#D4AF37]" aria-hidden="true"></i>
             </div>
+            <h4 class="text-xl font-bold text-white mb-3">${g.title}</h4>
+            <p class="text-[#aaa] text-sm leading-relaxed">${g.text}</p>
           </div>
         `).join('');
       }
@@ -903,15 +990,7 @@
         if (typeof lucide !== 'undefined') lucide.createIcons();
       }
 
-      // ========= MODAL =========
-      const modal = document.getElementById('bookingModal');
-      const closeBtn = document.getElementById('closeModal');
-      const popupForm = document.getElementById('popupForm');
-      const openTriggers = [
-        document.getElementById('heroCta'),
-        document.getElementById('heroBookBtn'),
-        document.getElementById('mobileBookBtn')
-      ];
+      // ========= MOBILE MENU =========
       const mobileNav = document.getElementById('mobileNav');
       const menuToggle = document.getElementById('menuToggle');
 
@@ -933,45 +1012,7 @@
         }
       }
 
-      function openModal() {
-        if (mobileNav.classList.contains('open')) toggleMenu(false);
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        document.getElementById('popupName')?.focus();
-      }
-
-      function closeModal() {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-
-      openTriggers.forEach(btn => btn?.addEventListener('click', openModal));
-      closeBtn?.addEventListener('click', closeModal);
-      modal?.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-      document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('active')) closeModal(); });
-
-      popupForm?.addEventListener('submit', e => {
-        e.preventDefault();
-        const name = document.getElementById('popupName').value.trim();
-        const email = document.getElementById('popupEmail').value.trim();
-        const phone = document.getElementById('popupPhone').value.trim();
-        const message = document.getElementById('popupMessage').value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        document.querySelectorAll('#popupNameError, #popupEmailError, #popupPhoneError').forEach(el => el.classList.add('hidden'));
-        let valid = true;
-        if (!name) { document.getElementById('popupNameError').classList.remove('hidden'); valid = false; }
-        if (!email || !emailRegex.test(email)) { document.getElementById('popupEmailError').classList.remove('hidden'); valid = false; }
-        if (!phone) { document.getElementById('popupPhoneError').classList.remove('hidden'); valid = false; }
-        if (!valid) return;
-
-        const whatsappMsg = `*New Consultation Request*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Project Details:* ${message || 'Not provided'}`;
-        window.open(`https://wa.me/917441167537?text=${whatsappMsg}`, '_blank');
-        closeModal();
-        popupForm.reset();
-      });
-
-      // ========= CONTACT FORM =========
+      // ========= CONTACT FORM (DIRECT TO WHATSAPP) =========
       function initForm() {
         const form = document.getElementById('contactForm');
         if (!form) return;
@@ -1038,7 +1079,7 @@
           consentError.classList.add('hidden');
         });
 
-        form.addEventListener('submit', async e => {
+        form.addEventListener('submit', e => {
           e.preventDefault();
           if (!validate()) {
             feedback.className = 'text-center text-sm text-red-400 mt-2';
@@ -1046,36 +1087,28 @@
             feedback.classList.remove('hidden');
             return;
           }
+          const nameVal = document.getElementById('name').value.trim();
+          const emailVal = document.getElementById('email').value.trim();
+          const msgVal = document.getElementById('message').value.trim();
+          const waText = `Hi Anuj, maine Quick Shop se inquiry bheji hai.\n\nName: ${nameVal}\nEmail: ${emailVal}\nDetails: ${msgVal}`;
+
+          window.open(buildWaLink(waText), '_blank', 'noopener,noreferrer');
+
           const submitBtn = form.querySelector('button[type="submit"]');
           const originalText = submitBtn.textContent;
-          submitBtn.textContent = 'Sending...';
-          submitBtn.disabled = true;
-          feedback.classList.add('hidden');
-
-          const formData = new FormData(form);
-          try {
-            await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(formData).toString() });
-            showSuccess(submitBtn, originalText, 'Thank you! We’ll get back to you shortly.');
-          } catch {
-            showSuccess(submitBtn, originalText, 'Thank you! We’ll get back to you shortly. (Demo)');
-          }
-        });
-
-        function showSuccess(btn, originalText, msg) {
-          btn.textContent = '✓ Sent!';
-          btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+          submitBtn.textContent = '✓ Opening WhatsApp...';
+          submitBtn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
           feedback.className = 'text-center text-sm text-green-400 mt-2';
-          feedback.textContent = msg;
+          feedback.textContent = 'Redirecting to WhatsApp with your details!';
           feedback.classList.remove('hidden');
           form.reset();
-          consentError.classList.add('hidden');
+
           setTimeout(() => {
-            btn.textContent = originalText;
-            btn.disabled = false;
-            btn.style.background = '';
+            submitBtn.textContent = originalText;
+            submitBtn.style.background = '';
             feedback.classList.add('hidden');
           }, 4000);
-        }
+        });
       }
 
       // ========= INITIALIZATION =========
@@ -1113,7 +1146,7 @@
         const toggleBtn = document.getElementById('menuToggle');
         if (!toggleBtn || !mobileNav) return;
         toggleBtn.addEventListener('click', () => toggleMenu());
-        mobileNav.querySelectorAll('a:not(#mobileBookBtn), button:not(#mobileBookBtn)').forEach(el => {
+        mobileNav.querySelectorAll('a, button').forEach(el => {
           el.addEventListener('click', () => {
             if (mobileNav.classList.contains('open')) toggleMenu(false);
           });
@@ -1193,7 +1226,7 @@
         renderProjects();
         renderPricing();
         renderProcess();
-        renderTestimonials();
+        renderGuarantees();
         renderFaq();
         initReveal();
         initNavSpy();

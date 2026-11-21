@@ -75,13 +75,11 @@
           animation: {
             'float': 'float 6s ease-in-out infinite',
             'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            'gold-shimmer': 'goldShimmer 3s infinite linear',
-            'marquee': 'marquee 20s linear infinite'
+            'gold-shimmer': 'goldShimmer 3s infinite linear'
           },
           keyframes: {
             float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
-            goldShimmer: { '0%': { backgroundPosition: '-100% 0' }, '100%': { backgroundPosition: '200% 0' } },
-            marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } }
+            goldShimmer: { '0%': { backgroundPosition: '-100% 0' }, '100%': { backgroundPosition: '200% 0' } }
           }
         }
       }
@@ -111,10 +109,10 @@
     }
     .skip-link:focus { top: 0; }
     .glass-nav {
-      background: rgba(5,5,5,0.7); backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px);
+      background: rgba(5,5,5,0.75); backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px);
       border: 1px solid rgba(255,255,255,0.05);
     }
-    @supports not (backdrop-filter: blur(28px)) { .glass-nav { background: rgba(5,5,5,0.92); } }
+    @supports not (backdrop-filter: blur(28px)) { .glass-nav { background: rgba(5,5,5,0.94); } }
     .premium-card {
       background: linear-gradient(180deg, var(--surface) 0%, var(--base) 100%);
       border: 1px solid var(--border);
@@ -171,7 +169,6 @@
     }
     .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
     .back-to-top:hover { transform: scale(1.1); }
-    .back-to-top:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
     .whatsapp-float {
       background: #25D366; color: #fff; border-radius: 9999px;
       width: 56px; height: 56px; display: flex; align-items: center; justify-content: center;
@@ -182,6 +179,47 @@
       transform: scale(1.08);
       box-shadow: 0 14px 34px rgba(37, 211, 102, 0.5);
     }
+
+    /* Interactive AI ChatBot Demo Modal */
+    .ai-modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      z-index: 10000; align-items: center; justify-content: center; padding: 1rem;
+    }
+    .ai-modal-overlay.active { display: flex; }
+    .ai-modal-box {
+      background: var(--surface); border: 1px solid rgba(212,175,55,0.45);
+      border-radius: 1.25rem; width: 100%; max-width: 440px; height: 610px; max-height: 90vh;
+      display: flex; flex-direction: column; overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.85), 0 0 35px rgba(212,175,55,0.12);
+      animation: modalSlideIn 0.25s ease-out;
+    }
+    @keyframes modalSlideIn {
+      from { opacity: 0; transform: scale(0.94) translateY(16px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .chat-scroll::-webkit-scrollbar { width: 5px; }
+    .chat-scroll::-webkit-scrollbar-track { background: #0A0A0A; }
+    .chat-scroll::-webkit-scrollbar-thumb { background: #262626; border-radius: 9999px; }
+    .chat-bot {
+      background: #141414; border: 1px solid #242424; color: #EBEBEB;
+      border-radius: 1rem 1rem 1rem 0.25rem;
+    }
+    .chat-user {
+      background: linear-gradient(135deg, #D4AF37, #997A15); color: #000; font-weight: 500;
+      border-radius: 1rem 1rem 0.25rem 1rem;
+    }
+    .typing-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: #D4AF37;
+      display: inline-block; animation: typingBounce 1.2s infinite ease-in-out;
+    }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typingBounce {
+      0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+      40% { transform: scale(1); opacity: 1; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
       .reveal { opacity: 1; transform: none; }
@@ -195,9 +233,6 @@
     }
     .scroll-mt-28 { scroll-margin-top: 7rem; }
     :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-    input[type="number"] { -moz-appearance: textfield; }
     #scrollProgress {
       position: fixed; top: 0; left: 0; height: 4px;
       background: linear-gradient(90deg, #D4AF37, #F9E596);
@@ -205,36 +240,17 @@
     }
     #bg-canvas {
       position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      z-index: -2; opacity: 0.3; pointer-events: none;
+      z-index: -2; pointer-events: none;
     }
     .error-text { color: #f87171; font-size: 0.7rem; margin-top: 0.25rem; }
 
     /* FAQ layout */
     .faq-header-custom {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      gap: 0.5rem 0.75rem;
-      width: 100%;
+      display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0.5rem 0.75rem; width: 100%;
     }
-    .faq-header-custom .faq-q {
-      flex: 1 1 140px;
-      font-weight: 500;
-      color: #fff;
-      text-align: left;
-      word-break: break-word;
-    }
-    .faq-header-custom .faq-h {
-      flex: 1 1 100px;
-      font-size: 0.7rem;
-      color: #888;
-      word-break: break-word;
-      line-height: 1.4;
-    }
-    .faq-header-custom .faq-chevron {
-      flex: 0 0 auto;
-      margin-top: 0.1rem;
-    }
+    .faq-header-custom .faq-q { flex: 1 1 140px; font-weight: 500; color: #fff; text-align: left; word-break: break-word; }
+    .faq-header-custom .faq-h { flex: 1 1 100px; font-size: 0.7rem; color: #888; word-break: break-word; line-height: 1.4; }
+    .faq-header-custom .faq-chevron { flex: 0 0 auto; margin-top: 0.1rem; }
     @media (max-width: 480px) {
       .faq-header-custom .faq-q { flex: 1 1 100%; }
       .faq-header-custom .faq-h { flex: 1 1 100%; font-size: 0.65rem; }
@@ -246,8 +262,53 @@
   <a class="skip-link" href="#main">Skip to main content</a>
   <div id="scrollProgress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 
-  <!-- Enhanced 3D Background Canvas -->
-  <canvas id="bg-canvas"></canvas>
+  <!-- Fast 2D Gold Particle Canvas (Zero WebGL Errors, 0KB External JS) -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Interactive AI ChatBot Demo Modal -->
+  <div id="aiDemoModal" class="ai-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="aiDemoTitle">
+    <div class="ai-modal-box">
+      <!-- Modal Header -->
+      <div class="px-5 py-4 bg-[#111111] border-b border-[#1F1F1F] flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/50 flex items-center justify-center text-[#D4AF37]">
+            <i data-lucide="bot" class="w-5 h-5" aria-hidden="true"></i>
+          </div>
+          <div>
+            <h3 id="aiDemoTitle" class="text-sm font-bold text-white leading-tight">24/7 AI Receptionist Demo</h3>
+            <p class="text-[11px] text-green-400 flex items-center gap-1.5 mt-0.5">
+              <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Online • Replies in 1 sec
+            </p>
+          </div>
+        </div>
+        <button id="closeAiModal" class="text-[#888] hover:text-[#D4AF37] text-2xl leading-none px-1 cursor-pointer bg-transparent border-0" aria-label="Close AI Demo">&times;</button>
+      </div>
+
+      <!-- Mode Switcher Tabs -->
+      <div class="grid grid-cols-2 gap-2 p-3 bg-[#080808] border-b border-[#1F1F1F]" role="tablist" aria-label="Select business demo">
+        <button type="button" class="ai-mode-tab py-2 px-3 rounded-lg text-xs font-bold transition-all bg-[#D4AF37] text-black" data-mode="clinic" role="tab" aria-selected="true">🦷 Dental Clinic</button>
+        <button type="button" class="ai-mode-tab py-2 px-3 rounded-lg text-xs font-bold transition-all bg-[#141414] text-[#888] hover:text-white border border-[#1F1F1F]" data-mode="coaching" role="tab" aria-selected="false">🎓 Coaching Institute</button>
+      </div>
+
+      <!-- Chat Feed -->
+      <div id="aiChatFeed" class="chat-scroll flex-1 overflow-y-auto p-4 space-y-3 text-xs leading-relaxed"></div>
+
+      <!-- Quick Reply Chips -->
+      <div id="aiQuickReplies" class="px-4 py-2.5 bg-[#080808] border-t border-[#1A1A1A] flex flex-wrap gap-1.5"></div>
+
+      <!-- Input Bar -->
+      <form id="aiChatForm" class="p-3 bg-[#0D0D0D] border-t border-[#1F1F1F] flex items-center gap-2">
+        <input type="text" id="aiChatInput" placeholder="Ask fees, timings, or type 'book'..." class="input-lux px-3.5 py-2.5 rounded-lg text-xs" autocomplete="off">
+        <button type="submit" class="btn-primary px-4 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider flex-shrink-0">Send</button>
+      </form>
+
+      <!-- Conversion Footer -->
+      <div class="px-4 py-2.5 bg-[#111111] border-t border-[#1F1F1F] flex items-center justify-between gap-2">
+        <span class="text-[10px] text-[#888]">Want this AI Bot for your business?</span>
+        <a href="https://wa.me/917441167537?text=Hi%20Anuj,%20maine%20Quick%20Shop%20par%20live%20AI%20ChatBot%20demo%20test%20kiya.%20Mujhe%20yehi%20AI%20System%20apne%20business%20ke%20liye%20chahiye." target="_blank" rel="noopener noreferrer" class="text-[10px] font-bold uppercase tracking-wider text-[#D4AF37] hover:underline whitespace-nowrap">Get This Bot &rarr;</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Header -->
   <header id="navbar" class="fixed top-0 w-full z-50 px-4 pt-6 transition-transform duration-300" role="banner">
@@ -293,6 +354,12 @@
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a id="heroBookBtn" href="https://wa.me/917441167537?text=Hi%20Anuj,%20maine%20Quick%20Shop%20dekha.%20Mujhe%20apne%20business%20ke%20liye%20free%201-min%20demo%20chahiye." target="_blank" rel="noopener noreferrer" class="btn-primary px-10 py-4 rounded-xl text-xs font-bold uppercase tracking-[0.1em]">Get Free 1-Min Demo</a>
           <a href="#work" class="btn-secondary px-10 py-4 rounded-xl text-xs font-bold uppercase tracking-[0.1em]">View Live Demos</a>
+        </div>
+        <div>
+          <button type="button" class="open-ai-demo inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#111111] border border-[#D4AF37]/40 text-xs text-[#F9E596] hover:border-[#D4AF37] hover:bg-[#1A1A1A] transition-all cursor-pointer">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            Test Live AI Receptionist Bot (15-Sec Demo)
+          </button>
         </div>
         <div class="flex flex-wrap justify-center items-center gap-x-5 gap-y-2 text-xs text-[#888] pt-2">
           <span>⚡ 3-Day Fast Delivery</span>
@@ -461,7 +528,7 @@
     </section>
   </main>
 
-  <!-- Back to Top (stacked above floating WhatsApp button) -->
+  <!-- Back to Top -->
   <button id="backToTop" class="back-to-top fixed bottom-24 right-6 p-3 rounded-full shadow-2xl" aria-label="Back to top">
     <i data-lucide="arrow-up" class="w-5 h-5" aria-hidden="true"></i>
   </button>
@@ -499,117 +566,98 @@
     </div>
   </footer>
 
-  <!-- Three.js – Enhanced 3D Background -->
+  <!-- Ultra-Lightweight 2D Gold Particle Background (No WebGL, Instant Load) -->
   <script>
     (function() {
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.getElementById('bg-canvas').style.display = 'none';
+      const canvas = document.getElementById('bg-canvas');
+      if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        if (canvas) canvas.style.display = 'none';
         return;
       }
 
-      const script = document.createElement('script');
-      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js';
-      script.onload = initAdvanced3D;
-      script.onerror = function() {
-        console.warn('Three.js not loaded – background disabled');
-        document.getElementById('bg-canvas').style.display = 'none';
-      };
-      document.head.appendChild(script);
-
-      function initAdvanced3D() {
-        const canvas = document.getElementById('bg-canvas');
-        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: false });
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
-        renderer.setSize(window.innerWidth, window.innerHeight);
-
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.5, 50);
-        camera.position.z = 8;
-
-        const particleCount = 1000;
-        const geometry = new THREE.BufferGeometry();
-        const positions = new Float32Array(particleCount * 3);
-        const colors = new Float32Array(particleCount * 3);
-
-        const colorPalette = [
-          new THREE.Color('#D4AF37'),
-          new THREE.Color('#F9E596'),
-          new THREE.Color('#FFFFFF'),
-          new THREE.Color('#B8860B')
-        ];
-
-        for (let i = 0; i < particleCount; i++) {
-          positions[i * 3] = (Math.random() - 0.5) * 15;
-          positions[i * 3 + 1] = (Math.random() - 0.5) * 15;
-          positions[i * 3 + 2] = (Math.random() - 0.5) * 12;
-
-          const color = colorPalette[Math.floor(Math.random() * colorPalette.length)];
-          colors[i * 3] = color.r;
-          colors[i * 3 + 1] = color.g;
-          colors[i * 3 + 2] = color.b;
-        }
-
-        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-        geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-
-        const material = new THREE.PointsMaterial({
-          size: 0.08,
-          vertexColors: true,
-          blending: THREE.AdditiveBlending,
-          depthWrite: false,
-          transparent: true,
-          opacity: 0.7,
-          sizeAttenuation: true
-        });
-
-        const particles = new THREE.Points(geometry, material);
-        scene.add(particles);
-
-        const mouse = { x: 0, y: 0 };
-        let targetX = 0, targetY = 0;
-        window.addEventListener('mousemove', (e) => {
-          mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
-          mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
-        });
-
-        window.addEventListener('resize', () => {
-          camera.aspect = window.innerWidth / window.innerHeight;
-          camera.updateProjectionMatrix();
-          renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-
-        let animationId;
-        function animate() {
-          animationId = requestAnimationFrame(animate);
-          targetX = mouse.x * 0.5;
-          targetY = mouse.y * 0.3;
-          camera.position.x += (targetX - camera.position.x) * 0.05;
-          camera.position.y += (targetY - camera.position.y) * 0.05;
-          camera.lookAt(0, 0, 0);
-
-          particles.rotation.x += 0.0002;
-          particles.rotation.y += 0.0003;
-          renderer.render(scene, camera);
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              animate();
-              observer.unobserve(canvas);
-            }
-          });
-        }, { threshold: 0.1 });
-        observer.observe(canvas);
-
-        document.addEventListener('visibilitychange', () => {
-          if (document.hidden) {
-            cancelAnimationFrame(animationId);
-          } else {
-            animate();
-          }
-        });
+      const ctx = canvas.getContext('2d');
+      if (!ctx) {
+        canvas.style.display = 'none';
+        return;
       }
+
+      let width = 0, height = 0, animationId = null;
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      const colors = ['rgba(212,175,55,0.65)', 'rgba(249,229,150,0.55)', 'rgba(255,255,255,0.35)', 'rgba(184,134,11,0.5)'];
+      const particleCount = window.innerWidth < 768 ? 55 : 110;
+      const particles = [];
+      const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
+
+      function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      function initParticles() {
+        particles.length = 0;
+        for (let i = 0; i < particleCount; i++) {
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            r: Math.random() * 1.8 + 0.6,
+            vx: (Math.random() - 0.5) * 0.25,
+            vy: (Math.random() - 0.5) * 0.25 - 0.08,
+            depth: Math.random() * 0.8 + 0.2,
+            color: colors[i % colors.length]
+          });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+        mouse.x += (mouse.tx - mouse.x) * 0.04;
+        mouse.y += (mouse.ty - mouse.y) * 0.04;
+
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < -10) p.x = width + 10;
+          if (p.x > width + 10) p.x = -10;
+          if (p.y < -10) p.y = height + 10;
+          if (p.y > height + 10) p.y = -10;
+
+          const px = p.x + mouse.x * 22 * p.depth;
+          const py = p.y + mouse.y * 16 * p.depth;
+
+          ctx.beginPath();
+          ctx.arc(px, py, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.color;
+          ctx.fill();
+        }
+        animationId = requestAnimationFrame(draw);
+      }
+
+      resize();
+      initParticles();
+      draw();
+
+      window.addEventListener('resize', () => {
+        resize();
+        initParticles();
+      }, { passive: true });
+
+      window.addEventListener('mousemove', (e) => {
+        mouse.tx = (e.clientX / width) - 0.5;
+        mouse.ty = (e.clientY / height) - 0.5;
+      }, { passive: true });
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          cancelAnimationFrame(animationId);
+        } else {
+          draw();
+        }
+      });
     })();
   </script>
 
@@ -631,7 +679,8 @@
         {
           icon: 'bot',
           title: '24/7 AI Receptionist Bot',
-          description: 'Answers patient/student FAQs & captures leads automatically while you sleep.'
+          description: 'Answers patient/student FAQs & captures leads automatically while you sleep.',
+          hasDemo: true
         },
         {
           icon: 'map-pin',
@@ -738,7 +787,8 @@
           ],
           cta: 'Get AI System',
           waMessage: 'Hi Anuj, main AI Business System plan (₹24,999) ke liye interested hoon. Mujhe website + 24/7 AI ChatBot ka demo chahiye.',
-          featured: true
+          featured: true,
+          hasDemo: true
         },
         {
           name: 'Custom Enterprise',
@@ -813,15 +863,192 @@
         }
       ];
 
+      // ========= INTERACTIVE AI CHATBOT DEMO ENGINE =========
+      const aiModes = {
+        clinic: {
+          welcome: 'Namaste! Welcome to **Smile Care Dental Clinic** 🦷. Main aapka 24/7 AI Receptionist hoon. Aap treatment fees, timings pooch sakte hain ya 10 seconds me appointment book kar sakte hain.',
+          chips: ['Root canal cost?', 'Clinic timings?', 'Book Appointment'],
+          slots: ['Today 5:00 PM', 'Tomorrow 11:00 AM', 'Tomorrow 6:30 PM'],
+          reply(text) {
+            const t = text.toLowerCase();
+            if (t.includes('root') || t.includes('cost') || t.includes('fee') || t.includes('price') || t.includes('charge')) {
+              return 'Consultation fee is **₹300** (adjustable in treatment). Painless Root Canal starts at **₹3,500** & Teeth Cleaning at **₹1,000**. Kya main aapka checkup slot book kar doon?';
+            }
+            if (t.includes('time') || t.includes('timing') || t.includes('open') || t.includes('hour')) {
+              return 'Hum **Mon–Sat: 10:00 AM – 2:00 PM & 5:00 PM – 8:30 PM** open rehte hain. Sunday emergency appointments ke liye available hain.';
+            }
+            if (t.includes('book') || t.includes('appointment') || t.includes('slot')) {
+              return { text: 'Great! Please choose your preferred appointment slot below:', askSlot: true };
+            }
+            return 'Main aapki Dental treatments, fees, clinic timings aur instant appointment booking me help kar sakta hoon. Neeche kisi option par click karein ya "Book Appointment" likhein!';
+          },
+          confirmSlot(slot) {
+            return `✅ **Appointment Slot Reserved: ${slot}**!\n\nLive website par ye booking details automatically doctor ke WhatsApp par chali jaati hain — bina kisi missed call ke.`;
+          }
+        },
+        coaching: {
+          welcome: 'Hello! Welcome to **Sandeep Coaching Academy** 🎓. Main aapka 24/7 AI Counselor hoon. New batches, fees ya Free Demo Class ke baare me poochiye!',
+          chips: ['New batches & fees?', 'Free Demo Class', 'Book Counseling'],
+          slots: ['Tomorrow 9:00 AM Batch', 'Tomorrow 4:00 PM Batch', 'Weekend Counseling'],
+          reply(text) {
+            const t = text.toLowerCase();
+            if (t.includes('batch') || t.includes('fee') || t.includes('cost') || t.includes('course')) {
+              return 'New **NEET / JEE / SSC Foundation** batches Monday se start ho rahe hain. Monthly fees **₹1,500** se start hain with study notes & weekly tests. Kya aap 2-day Free Demo Class book karna chahenge?';
+            }
+            if (t.includes('demo') || t.includes('book') || t.includes('counsel') || t.includes('admission')) {
+              return { text: 'Awesome! Apni Free Demo Class / Counseling ke liye preferred slot select karein:', askSlot: true };
+            }
+            if (t.includes('time') || t.includes('timing')) {
+              return 'Morning batches **7:30 AM – 11:30 AM** aur Evening batches **3:30 PM – 7:30 PM** chalte hain.';
+            }
+            return 'Main aapko new batches, fee structure aur Free Demo Class booking me madad kar sakta hoon. Neeche button tap karein!';
+          },
+          confirmSlot(slot) {
+            return `✅ **Demo Seat Reserved: ${slot}**!\n\nLive site par student ka naam, course aur slot seedha institute ke WhatsApp par instant alert ke saath aata hai.`;
+          }
+        }
+      };
+
+      let currentAiMode = 'clinic';
+      let waitingForSlot = false;
+
+      const aiModal = document.getElementById('aiDemoModal');
+      const aiFeed = document.getElementById('aiChatFeed');
+      const aiChips = document.getElementById('aiQuickReplies');
+      const aiForm = document.getElementById('aiChatForm');
+      const aiInput = document.getElementById('aiChatInput');
+
+      function formatBold(str) {
+        return str
+          .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+          .replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>')
+          .replace(/\n/g, '<br>');
+      }
+
+      function appendMessage(sender, htmlText) {
+        const wrap = document.createElement('div');
+        wrap.className = sender === 'user' ? 'flex justify-end' : 'flex justify-start';
+        const bubble = document.createElement('div');
+        bubble.className = sender === 'user'
+          ? 'chat-user px-3.5 py-2.5 max-w-[82%]'
+          : 'chat-bot px-3.5 py-2.5 max-w-[86%]';
+        bubble.innerHTML = sender === 'user' ? htmlText : formatBold(htmlText);
+        wrap.appendChild(bubble);
+        aiFeed.appendChild(wrap);
+        aiFeed.scrollTop = aiFeed.scrollHeight;
+      }
+
+      function showTyping() {
+        const wrap = document.createElement('div');
+        wrap.id = 'aiTypingIndicator';
+        wrap.className = 'flex justify-start';
+        wrap.innerHTML = `<div class="chat-bot px-3.5 py-2.5 flex items-center gap-1.5"><span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span></div>`;
+        aiFeed.appendChild(wrap);
+        aiFeed.scrollTop = aiFeed.scrollHeight;
+      }
+
+      function removeTyping() {
+        document.getElementById('aiTypingIndicator')?.remove();
+      }
+
+      function renderChips(list) {
+        aiChips.innerHTML = list.map(label => `
+          <button type="button" class="ai-chip px-3 py-1.5 rounded-full text-[11px] bg-[#161616] border border-[#D4AF37]/40 text-[#F9E596] hover:bg-[#D4AF37] hover:text-black transition-colors cursor-pointer">${label}</button>
+        `).join('');
+      }
+
+      function loadAiMode(mode) {
+        currentAiMode = mode;
+        waitingForSlot = false;
+        aiFeed.innerHTML = '';
+        document.querySelectorAll('.ai-mode-tab').forEach(tab => {
+          const active = tab.dataset.mode === mode;
+          tab.setAttribute('aria-selected', active);
+          tab.className = active
+            ? 'ai-mode-tab py-2 px-3 rounded-lg text-xs font-bold transition-all bg-[#D4AF37] text-black cursor-pointer'
+            : 'ai-mode-tab py-2 px-3 rounded-lg text-xs font-bold transition-all bg-[#141414] text-[#888] hover:text-white border border-[#1F1F1F] cursor-pointer';
+        });
+        appendMessage('bot', aiModes[mode].welcome);
+        renderChips(aiModes[mode].chips);
+      }
+
+      function handleAiUserInput(rawText) {
+        const text = rawText.trim();
+        if (!text) return;
+        appendMessage('user', text.replace(/</g, '&lt;').replace(/>/g, '&gt;'));
+        aiInput.value = '';
+        showTyping();
+
+        const modeObj = aiModes[currentAiMode];
+        setTimeout(() => {
+          removeTyping();
+          if (waitingForSlot) {
+            waitingForSlot = false;
+            appendMessage('bot', modeObj.confirmSlot(text));
+            renderChips(modeObj.chips);
+            return;
+          }
+          const res = modeObj.reply(text);
+          if (typeof res === 'object' && res.askSlot) {
+            waitingForSlot = true;
+            appendMessage('bot', res.text);
+            renderChips(modeObj.slots);
+          } else {
+            appendMessage('bot', res);
+            renderChips(modeObj.chips);
+          }
+        }, 450);
+      }
+
+      function openAiModal(mode = 'clinic') {
+        if (mobileNav.classList.contains('open')) toggleMenu(false);
+        aiModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        loadAiMode(mode);
+        refreshIcons();
+        setTimeout(() => aiInput?.focus(), 60);
+      }
+
+      function closeAiModal() {
+        aiModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      document.getElementById('closeAiModal')?.addEventListener('click', closeAiModal);
+      aiModal?.addEventListener('click', e => { if (e.target === aiModal) closeAiModal(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && aiModal.classList.contains('active')) closeAiModal(); });
+
+      document.querySelectorAll('.ai-mode-tab').forEach(tab => {
+        tab.addEventListener('click', () => loadAiMode(tab.dataset.mode));
+      });
+
+      aiChips?.addEventListener('click', e => {
+        const chip = e.target.closest('.ai-chip');
+        if (chip) handleAiUserInput(chip.textContent);
+      });
+
+      aiForm?.addEventListener('submit', e => {
+        e.preventDefault();
+        handleAiUserInput(aiInput.value);
+      });
+
+      document.addEventListener('click', e => {
+        const trigger = e.target.closest('.open-ai-demo');
+        if (trigger) openAiModal(trigger.dataset.mode || 'clinic');
+      });
+
       // ========= RENDER FUNCTIONS =========
       function renderServices() {
         const grid = document.getElementById('servicesGrid');
         if (!grid) return;
         grid.innerHTML = services.map((s, i) => `
-          <article class="premium-card p-8 rounded-2xl text-center reveal" style="transition-delay: ${i * 100}ms" role="listitem">
-            <i data-lucide="${s.icon}" class="w-10 h-10 text-[#D4AF37] mx-auto mb-4" aria-hidden="true"></i>
-            <h4 class="text-white font-bold">${s.title}</h4>
-            <p class="text-[#888] text-xs mt-2 leading-relaxed">${s.description}</p>
+          <article class="premium-card p-8 rounded-2xl text-center reveal flex flex-col justify-between" style="transition-delay: ${i * 100}ms" role="listitem">
+            <div>
+              <i data-lucide="${s.icon}" class="w-10 h-10 text-[#D4AF37] mx-auto mb-4" aria-hidden="true"></i>
+              <h4 class="text-white font-bold">${s.title}</h4>
+              <p class="text-[#888] text-xs mt-2 leading-relaxed">${s.description}</p>
+            </div>
+            ${s.hasDemo ? '<button type="button" class="open-ai-demo mt-4 text-[11px] font-bold uppercase tracking-wider text-[#D4AF37] hover:underline cursor-pointer bg-transparent border-0">Try Live Bot &rarr;</button>' : ''}
           </article>
         `).join('');
       }
@@ -911,7 +1138,10 @@
                   ${plan.features.map(f => `<li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5" aria-hidden="true"></i><span>${f}</span></li>`).join('')}
                 </ul>
               </div>
-              <a href="${waHref}" target="_blank" rel="noopener noreferrer" class="btn-primary block py-3.5 rounded-lg text-xs font-bold uppercase tracking-[0.1em]">${plan.cta}</a>
+              <div class="space-y-2.5">
+                <a href="${waHref}" target="_blank" rel="noopener noreferrer" class="btn-primary block py-3.5 rounded-lg text-xs font-bold uppercase tracking-[0.1em]">${plan.cta}</a>
+                ${plan.hasDemo ? '<button type="button" class="open-ai-demo w-full py-2 text-[11px] font-semibold text-[#D4AF37] hover:underline cursor-pointer bg-transparent border-0">🤖 Test Live AI Bot First</button>' : ''}
+              </div>
             </div>
           `;
         }).join('');
@@ -1156,27 +1386,12 @@
             toggleMenu(false);
           }
         });
-        mobileNav.addEventListener('keydown', e => {
-          if (e.key === 'Tab') {
-            const focusable = mobileNav.querySelectorAll('a, button');
-            if (!focusable.length) return;
-            const first = focusable[0];
-            const last = focusable[focusable.length - 1];
-            if (e.shiftKey && document.activeElement === first) {
-              e.preventDefault();
-              last.focus();
-            } else if (!e.shiftKey && document.activeElement === last) {
-              e.preventDefault();
-              first.focus();
-            }
-          }
-        });
       }
 
       function initBackToTop() {
         const btn = document.getElementById('backToTop');
         if (!btn) return;
-        window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400));
+        window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400), { passive: true });
         btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
       }
 
@@ -1189,7 +1404,7 @@
           const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
           bar.style.width = `${progress}%`;
           bar.setAttribute('aria-valuenow', Math.round(progress));
-        });
+        }, { passive: true });
       }
 
       function initNavbarHide() {
@@ -1200,7 +1415,7 @@
           const currentScroll = window.scrollY;
           navbar.style.transform = currentScroll > 100 && currentScroll > lastScroll ? 'translateY(-120%)' : 'translateY(0)';
           lastScroll = currentScroll;
-        });
+        }, { passive: true });
       }
 
       function initNavSpy() {
